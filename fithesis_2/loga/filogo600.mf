@@ -1,0 +1,2 @@
+design_size := 600;
+input b-filogo;

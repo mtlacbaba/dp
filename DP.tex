@@ -65,7 +65,7 @@ V následujícím textu je uvedno několik definic portálu a podnikového port�
 
 \item Například Gála definoval portál jako jednotné rohraní, ve kterém lze pracovat s běžnými službami a nástroji jako jsou, například zpravodajství a~komunikace, mimo to je v něm zaručen přístup k všeobecným aplikacím jako jsou vlastní stránky a blogy, a k aplikacím specializovaným, například slovníkům. \cite{gala}
 
-\item Tato definice portálu je převzata ze standardu JSR-286 a zní následovně: Portál je webová aplikace, která (obvykle) poskytuje možnost personalizace, autentifikace, agregace obsahu z různých zdrojů a slouží jako prezentační vrstva informačních systémů. Agregací se rozumí integrace obsahu z různých zdrojů v rámci jedné webové stránky. Portál může mít vysoce propracované nástroje pro personalizaci, které poskytují obsah upravitelný podle přání uživatele. Stránky portálu mohou mít různé skupiny portletů \footnote[1]{odkaz na portlet}, které vytvářejí obsah pro různé uživatele.  \cite{jsr-286}
+\item Tato definice portálu je převzata ze standardu JSR-286 a zní následovně: Portál je webová aplikace, která (obvykle) poskytuje možnost personalizace, autentifikace, agregace obsahu z různých zdrojů a slouží jako prezentační vrstva informačních systémů. Agregací se rozumí integrace obsahu z různých zdrojů v rámci jedné webové stránky. Portál může mít vysoce propracované nástroje pro personalizaci, které poskytují obsah upravitelný podle přání uživatele. Stránky portálu mohou mít různé skupiny portletů \footnote[1]{Bližší informace v dalších částech této práce.}, které vytvářejí obsah pro různé uživatele.  \cite{jsr-286}
 
 \item Předchozí defince se týkají portálu obecně, proto zde uvedu také definici podnikového portálu jako takového. Například podle Čecha je podnikový portál definován jako internetové nebo intranetové stránky, které slouží jako vstupní bod, respektive brána k různým datovým, informačním a znalostním zdrojům v organizaci. Jejich cílem je zpřístupnit tyto zdroje specifické skupině lidí. Může to být jak zákazníkům, tak také vlastním zaměstnacům nebo partnerům. \cite{cech}
 
@@ -73,8 +73,41 @@ V následujícím textu je uvedno několik definic portálu a podnikového port�
 
 V předchozích definicích portálu jsou naznačeny některé základní rysy podnikových portálů. Mezi základní vlastnosti můžeme považovat jediný přístupový bod, integrace, federace, přizpůsobivost, personalizace, kontrola přístupu a vyhledávání v podnikovém obsahu, tak jak jsou uvedeny v \cite{enterprise-portal} 
 
+\section{Konkrétní portálová řešení}
+Existuje a používá se celá řada konkrétních portálových řešení. Nejčastěji bývají implementovány v jazyce Java a podporují standardy JSR-168 a JSR-286 \footnote[2]{Bližší informace v dalších částech této práce} pro tvorbu portletů v jazyce Java. Existují také portály i pro jiné technologie, například pro platformu .NET je možné využít Microsoft SharePoint, ale nejvíce řešení existuje pro jazyk Java, kde mezi nejznámější patří IBM Websphere Portal, JBoss GateIn, Oracle WebCenter či Liferay Portal. Tyto portály již většinou obsahují velké množství již připravaných portletů, např. wiki, správa souborů, komunikace a další podobné.
 
+V praktické části této práce bude vytvořen portlet pro tvorbu workflow pomocí grafického designeru v portálu Liferay.
 
+\section{Liferay Portal}
+Liferay portal je open-source podnikový portál založený na jazyce Java vyvíjený společností Liferay, Inc.. Podporuje specifikace JSR-168 a JSR-286 pro tvorbu portletů v jazyce Java. Liferay Portal je k dispozici ve dvou edicích, Community Edition a Enterprise Edition.
+
+Community Edition je bezplatná verze portálu, která je volně dostupná ke stažení. Tato verze je ale bez oficiální podpory, ta je dostupná pouze prostřednictvím Liferay komunity. Druhá verze portálu, Liferay Portal Enterprise Edition je placená edice. U této verze je kladen velký důraz na stabilitu, bezpečnost a výkon. K této edici patří dlouhodobá podpora od společnosti Liferay, Inc. nebo jejích partenerů.
+
+Ihned po instalaci portálu je k dispozici množství již předinstalovaných portletů. Je možné například ihned využívat wiki, fórům, kalendář, galerii obrázků. Liferay portál podporuje různé způsoby, jak jej lze upravovat či rozšiřovat. Pro změnu vzhledu můžeme využít témata či šablony, dále funkcionalitu portálu je možno rozšířit pomocí portletů, měnit vlastnoti portálu či portletů je umožněno díky tzv. hooks a větší a zásadnější změny přímo v jádru portálu se provádí pomocí pluginu Ext. \cite{developer-guide}
+
+Mezi hlavní a důežité vlastnosti portálu Liferay bývají nejčastěji řazeny tyto: \cite{liferay-features}
+\begin{itemize}
+\item zabezpečené jednotné přihlášení,
+\item nástroje pro správu workflow,
+\item snadná instalce samotného portálu i nových aplikací a rozšíření,
+\item od verze 6.1 CE GA2 umožňuje instalaci rozšíření a aplikcí z Liferay Marketplace,
+\item obsahuje systém pro správu obsahu (Liferay CMS), který umožňuje oprávněným uživatelům vytvářet a spravovat obsah webu přímo z prohlížeče i bez znalosti programování,
+\item vícejazyčné uživatelské rozhraní,
+\item personalizace portálových stránek,
+\item jednoduchá úpráva stránek způsobem táhni a pusť,
+\item umožňuje dělit uživavatele do organizací, či do skupin uživatelů a podle těchto rolí zobrazovat různý obsah či aplikace,
+\item automatické nahrávání souborů,
+\item podpora pro různé platformy - různé aplikační servery, operační systémy a databáze,
+\item podporuje různé metody integrace včetně SOAP, REST, RSS a také různá proprietární rozhraní.
+\end{itemize}
+
+To jsou některé z důvodů, proč se podnikový portál Liferay stal rožšířenou a oblíbenou platformou pro vývoj firemních webů a systému v jazyce Java.
+
+\chapter{Vývoj portletů}
+V této kapitole bude popsán vývoj portletů, které tvoří obsah portálů.
+
+\section{Portlet}
+Portlet je webová aplikace, která poskytuje uživatelům specifický obsah, typicky informaci nebo službu. Portlet je spravován portletovým kontejnerem, který zpracovává požadavky portletu a následně genereju dynamický obsah v podobě fragmentů ve značkovačkovacím jazyku (HTML, XHTML, WML).  Tyto fragmenty jsou pak spojovány a dohromady vytváří portálovou stránku.
 
 \chapter{Vzorová kapitola}
 \section{Vzorová sekce}
@@ -118,6 +151,12 @@ GÁLA, L. et al. \textit{Podniková informatika}. 1. vyd. Praha: Grada Publishin
 
 \bibitem{enterprise-portal}
 \textit{Enterprise portal}, Wikipedia, dostupný na \url{http://en.wikipedia.org/wiki/Enterprise_portal} [cit. 2014-03-27].
+
+\bibitem{developer-guide}
+\textit{Liferay Portal 6.2 Developer's Guide}, Liferay Inc., dostupný na \url{http://www.liferay.com/documentation/liferay-portal/6.2/development} [cit. 2014-04-02].
+
+\bibitem{liferay-features}
+\textit{Portal Features}, Liferay Inc., dostupný na \url{http://www.liferay.com/products/liferay-portal/features/portal} [cit. 2014-04-02].
 
 
 

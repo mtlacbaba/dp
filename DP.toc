@@ -5,8 +5,10 @@
 \contentsline {section}{\numberline {2.2}\slshape Liferay Portal}{4}{section.2.2}
 \contentsline {chapter}{\numberline {3}\bfseries V\IeC {\'y}voj portlet\IeC {\r u}}{6}{chapter.3}
 \contentsline {section}{\numberline {3.1}\slshape Portlet}{6}{section.3.1}
-\contentsline {chapter}{\numberline {4}\bfseries Vzorov\IeC {\'a} kapitola}{7}{chapter.4}
-\contentsline {section}{\numberline {4.1}\slshape Vzorov\IeC {\'a} sekce}{7}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}\rmfamily Vzorov\IeC {\'a} podsekce}{7}{subsection.4.1.1}
-\contentsline {chapter}{\numberline {A}\bfseries Polo\IeC {\v z}ky seznamu}{9}{appendix.A}
-\contentsline {chapter}{\numberline {B}\bfseries Polo\IeC {\v z}ky seznamu}{10}{appendix.B}
+\contentsline {section}{\numberline {3.2}\slshape Specifikace}{7}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}\rmfamily \IeC {\v Z}ivotn\IeC {\'\i } cyklus portletu}{7}{subsection.3.2.1}
+\contentsline {chapter}{\numberline {4}\bfseries Vzorov\IeC {\'a} kapitola}{8}{chapter.4}
+\contentsline {section}{\numberline {4.1}\slshape Vzorov\IeC {\'a} sekce}{8}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}\rmfamily Vzorov\IeC {\'a} podsekce}{8}{subsection.4.1.1}
+\contentsline {chapter}{\numberline {A}\bfseries Polo\IeC {\v z}ky seznamu}{10}{appendix.A}
+\contentsline {chapter}{\numberline {B}\bfseries Polo\IeC {\v z}ky seznamu}{11}{appendix.B}

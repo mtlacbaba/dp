@@ -107,17 +107,40 @@ To jsou některé z důvodů, proč se podnikový portál Liferay stal rožší�
 V této kapitole bude popsán vývoj portletů, které tvoří obsah portálů.
 
 \section{Portlet}
-Portlet je webová aplikace, která poskytuje uživatelům specifický obsah, typicky informaci nebo službu. Portlet je spravován portletovým kontejnerem, který zpracovává požadavky portletu a následně genereju dynamický obsah v podobě fragmentů v některým ze značkovacích jazyků -- HTML, XHTML, WML.  Tyto fragmenty jsou pak spojovány a dohromady vytváří portálovou stránku.
+Portlet je webová aplikace, která poskytuje uživatelům specifický obsah, typicky informaci nebo službu. Portlet je spravován portletovým kontejnerem, který zpracovává požadavky portletu a následně generuje dynamický obsah v podobě fragmentů v některým ze značkovacích jazyků -- HTML, XHTML, WML.  Tyto fragmenty jsou pak spojovány a dohromady vytváří portálovou stránku.
+
+Portletový kontejner má tedy opovědnost za řízení životního cyklu jedntlivých portletů a je v něm také uloženo nastavení uživatele pro daný portlet. Ale jednotlivé části generované jednotlivými portlety slučuje dohromady na stránku portál. Portál a portletový kontejner mohou postaveny jako jedna komponenta ale mohou být také jako komponenty dvě. Na následujícím obrázku 3.1 je zobrazen průběh vytváření stránky v portálu tak, jak bylo již výše naznačeno.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=340px]{images/vytvareni_stranky_v_portalu.png}
+\caption{Vytváření stránky v portálu (převzato z \cite{jsr-286})}
+\end{figure}
+
+\section{Specifikace}
+Důvodem pro vytvoření portletové specifikace byla situace, kdy různí dodavatelé používali svá vlastní API, která neumožňovala přenositelnost mezi portálovými servery.
+
+První verze Java Portlet Specification 1.0 (JSR-168) byla vydána v roce 2003. V této specifikaci ještě bylo stále různé nedostatky a chyby, které pak tvůrci portletů stejně řešili každý po svém. To způsobovalo i nadále, že portlety byly mezi portálovými servery stále problematicky přenositelné či nepřenositelné úplně. Proto vznikla druhá verze Java Portlet Specification 2.0 (JSR-286) a ta byla vydána v červnu 2008. Mezi nejdůležitější přínosy patří následující:
+\begin{itemize}
+\item sdílení parametrů mezi portlety skrz veřejné render parametry,
+\item meziportletová komunikace pomocí zasílaní událostí,
+\item transformace informací nově definovanými portletovými filtry,
+\item možnost portletů poskytovat zdroje jako jsou například PDF soubory.
+\end{itemize}
+Většina portletových kontejnerů sice poskytuje k základním požadavkům i svá rozšíření. Tyto rozšíření však nemusíme využívat a tak můžeme zachovat myšlenku snadné přenositelnosti.
+
+\subsection{Životní cyklus portletu}
+Každý portlet musí implementovat rozhraní \verb|Portlet|. Toto rozhraní obsahuje čtyři základní metody, které musí být implementovány a které řídí životní cyklus portletu - \verb|init(), processAction(), render(), destroy()|.
+
+Metoda \verb|init()| je volána ihned při vytváření portletu a je používána například pro přípravu zdrojů potřebných portletem.
+
+
 
 \chapter{Vzorová kapitola}
 \section{Vzorová sekce}
 \subsection{Vzorová podsekce}
 
-\begin{figure}[htp]
-\centering
-\includegraphics[width=340px]{images/bandwith.pdf}
-\caption{Vzorový obrázek}
-\end{figure}
+
 
 \begin{itemize}
 \item vzorový seznam

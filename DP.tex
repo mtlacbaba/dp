@@ -134,7 +134,39 @@ Každý portlet musí implementovat rozhraní \verb|Portlet|. Toto rozhraní obs
 
 Metoda \verb|init()| je volána ihned při vytváření portletu a je používána například pro přípravu zdrojů potřebných portletem.
 
+Metoda \verb|processAction()| je volána vždy po provedení nějaké akce uživatelem, když se touto akcí nějak mění stav portletu. Může to být například akce potvrzení formuláře a následné zpracování a uložení dat v databázi.
 
+Metoda \verb|render()| má za úkol generovat fragment stránky, který je pak dostupný uživateli v portletu. V této metodě by se neměl měnit stav portletu.
+
+Poslední metodou je \verb|destroy()|. Ta je volána před odstraněním portletu z paměti. Poskytuje poslední možnost pro uvolnění zdrojů, které byly portletem používány. \cite{jsr-286}
+
+Zpracování požadavků v portletech může procházet několika fázemi zpracování.
+
+\begin{itemize}
+\item Render -- vykreslovací fáze, ve které se typicky nemění stav portletu, odpovídá jí metoda \verb|render()|.
+\item Action -- portlet zpracovává nějakou akci a typicky mění svůj stav, odpovídá ji metoda \verb|processAction()|.
+\item Resource -- portletem je poskytován nějaký zdroj, např. PDF soubory. Aby portlet mohl podporovat tuto funkcionalitu, musí implementovat rozhraní \verb|ResourceServingPortlet|.
+\item Event -- portlet přijímá nějakou událost a nějak na ni reaguje. Portlet v tomto případě musí implementovat rozhraní \verb|EventPortlet|.
+\end{itemize}
+
+Po každé action fázi musí následovat fáze render. Pokud se na portálové stránce vyskytuje více portletů, je metoda render zavolána u všech zobrazených portletů. Tento průběh je vidět na obrázku 3.2.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=340px]{images/process_action.png}
+\caption{Zpracování požadavku na portlet (převzato z \cite{portlets-in-action})}
+\end{figure}
+
+\subsection{Režimy portletu}
+Portletová specifikace obsahuje tři režimy portletu, které umožňují zobrazit jiný obsah v závislosti na požadovaném úkolu. Tyto režimy využívá metoda \verb|render()|, která podle nich vygeneruje odpovídající obsah.
+
+\begin{itemize}
+\item View -- základní režim používaný při klasickém zobrazení portletu na portálové stránce.
+\item Edit -- nepovinný, uživateli umožňuje nastavovat portlet.
+\item Help -- nepovinný, zobrazuje se nápověda k danému portletu.
+\end{itemize}
+
+Ve třídě \verb|GenericPortlet| jsou k těmto účelům definovány metody \verb|doView()|, \verb|doEdit()| a \verb|doHelp()|. Jednotlivé portletové režimy by měli být implementovány přetížením těchto metod. Každý portál si také může definovat vlastní portletové režimy. Každý portlet musí mít zadefinováno, které režimy podporuje.
 
 \chapter{Vzorová kapitola}
 \section{Vzorová sekce}
@@ -180,6 +212,9 @@ GÁLA, L. et al. \textit{Podniková informatika}. 1. vyd. Praha: Grada Publishin
 
 \bibitem{liferay-features}
 \textit{Portal Features}, Liferay Inc., dostupný na \url{http://www.liferay.com/products/liferay-portal/features/portal} [cit. 2014-04-02].
+
+\bibitem{portlets-in-action}
+SARIN, Ashish. \textit{Portlets in action}, Shelter Island, NY: Manning, 2011.
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.27)  8 APR 2014 23:35
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.27)  14 APR 2014 23:15
 entering extended mode
 **C:/Users/IB/Documents/dp/dp/DP.tex
 (C:/Users/IB/Documents/dp/dp/DP.tex
@@ -609,7 +609,7 @@ Package hyperref Warning: Composite letter `\textring+u'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textring' on input line 106.
 
-<images/vytvareni_stranky_v_portalu.png, id=166, 429.2838pt x 194.4063pt>
+<images/vytvareni_stranky_v_portalu.png, id=186, 429.2838pt x 194.4063pt>
 File: images/vytvareni_stranky_v_portalu.png Graphic file (type png)
 
 <use images/vytvareni_stranky_v_portalu.png>
@@ -639,59 +639,70 @@ Overfull \hbox (14.32567pt too wide) in paragraph at lines 165--166
 
 [8] [9]
 Kapitola 4.
+
+Package hyperref Warning: Composite letter `\textring+u'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textring' on input line 190.
+
 [10
 
 ]
+
+Package hyperref Warning: Composite letter `\textring+u'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textring' on input line 198.
+
+[11]
 Kapitola 5.
 
-LaTeX Warning: Citation `satrapa-ipv6' on page 11 undefined on input line 202.
+LaTeX Warning: Citation `satrapa-ipv6' on page 12 undefined on input line 231.
 
-[11
+[12
 
 ]
-Underfull \hbox (badness 2460) in paragraph at lines 224--225
+Underfull \hbox (badness 2460) in paragraph at lines 253--254
 []\T1/lmr/m/it/10.95 Liferay Por-tal 6.2 De-ve-lo-per's Gu-ide\T1/lmr/m/n/10.95
  , Li-fe-ray Inc., do-stupný na
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 224--225
+Underfull \hbox (badness 10000) in paragraph at lines 253--254
 []$\T1/lmtt/m/n/10.95 http : / / www . liferay . com / documentation / liferay-
 []portal / 6 . 2 /$
  []
 
-[12
-
-]
-P\v {r}\'{\i }loha A.
 [13
 
 ]
-P\v {r}\'{\i }loha B.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 250.
+P\v {r}\'{\i }loha A.
 [14
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 250.
+P\v {r}\'{\i }loha B.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 282.
+[15
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 282.
  (C:\Users\IB\Documents\dp\dp\DP.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 250.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 250.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 282.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 282.
 Package rerunfilecheck Info: File `DP.out' has not changed.
-(rerunfilecheck)             Checksum: B7C08051EB1EC4BC5E86082EC143E8F6;1090.
+(rerunfilecheck)             Checksum: ABECDFC4A4308A1192CC334C36E6150C;1423.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 250.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 282.
  ) 
 Here is how much of TeX's memory you used:
- 6218 strings out of 493921
- 89669 string characters out of 3144885
- 170926 words of memory out of 3000000
- 9327 multiletter control sequences out of 15000+200000
+ 6229 strings out of 493921
+ 89817 string characters out of 3144885
+ 170952 words of memory out of 3000000
+ 9332 multiletter control sequences out of 15000+200000
  56333 words of font info for 41 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 30i,9n,31p,756b,392s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,9n,31p,756b,400s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc} <C:\Users\IB\AppData\Lo
 cal\MiKTeX\2.9\fonts\pk\ljfour\unknown\unknown\dpi514\fi-logo.pk><C:/Program Fi
@@ -705,9 +716,9 @@ Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/Program Files
 eX 2.9/fonts/type1/public/lm/lmro10.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
 lic/lm/lmtt10.pfb>
-Output written on DP.pdf (19 pages, 360932 bytes).
+Output written on DP.pdf (20 pages, 372448 bytes).
 PDF statistics:
- 331 PDF objects out of 1000 (max. 8388607)
- 55 named destinations out of 1000 (max. 500000)
- 162 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 359 PDF objects out of 1000 (max. 8388607)
+ 61 named destinations out of 1000 (max. 500000)
+ 194 words of extra memory for PDF output out of 10000 (max. 10000000)
 

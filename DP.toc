@@ -11,8 +11,12 @@
 \contentsline {subsection}{\numberline {3.2.3}\rmfamily Stavy okna}{8}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}\rmfamily Struktura poprt\IeC {\'a}lov\IeC {\'e} aplikace}{9}{subsection.3.2.4}
 \contentsline {chapter}{\numberline {4}\bfseries Workflow}{10}{chapter.4}
-\contentsline {chapter}{\numberline {5}\bfseries Vzorov\IeC {\'a} kapitola}{11}{chapter.5}
-\contentsline {section}{\numberline {5.1}\slshape Vzorov\IeC {\'a} sekce}{11}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}\rmfamily Vzorov\IeC {\'a} podsekce}{11}{subsection.5.1.1}
-\contentsline {chapter}{\numberline {A}\bfseries Polo\IeC {\v z}ky seznamu}{13}{appendix.A}
-\contentsline {chapter}{\numberline {B}\bfseries Polo\IeC {\v z}ky seznamu}{14}{appendix.B}
+\contentsline {section}{\numberline {4.1}\slshape Typy workflow syst\IeC {\'e}mu}{10}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}\rmfamily Hledisko charakteru proces\IeC {\r u}}{10}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}\rmfamily Hledisko orientace proces\IeC {\r u}}{11}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}\rmfamily Hledisko techologick\IeC {\'e} infrastruktury}{11}{subsection.4.1.3}
+\contentsline {chapter}{\numberline {5}\bfseries Vzorov\IeC {\'a} kapitola}{12}{chapter.5}
+\contentsline {section}{\numberline {5.1}\slshape Vzorov\IeC {\'a} sekce}{12}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}\rmfamily Vzorov\IeC {\'a} podsekce}{12}{subsection.5.1.1}
+\contentsline {chapter}{\numberline {A}\bfseries Polo\IeC {\v z}ky seznamu}{14}{appendix.A}
+\contentsline {chapter}{\numberline {B}\bfseries Polo\IeC {\v z}ky seznamu}{15}{appendix.B}

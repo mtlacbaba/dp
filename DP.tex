@@ -177,9 +177,38 @@ Portletová specifikace definuje tři základní stavy.
 Portálové aplikace jsou uloženy ve standardní archivním souboru jazyka Java, Web ARchive (WAR). Mohou obsahovat více portletů, servlety, JSP soubory a další. Musí obsahovat webový deskriptor a také navíc portletový deskriptor implementace \verb|portlet.xml|.
 
 \chapter{Workflow}
-Pojem workflow (tok práce) v sobě skrývá několik významů.Workflow může být definováno jako automatizace celého nebo části podnikového procesu, kde jsou informace, dokumenty nebo celé úkoly předávány od jednoho účastníka procesu k dalšímu podle definovaných pravidel tak, aby se přispělo či dosáhlo naplnění celkových podnikových cílů. \cite{workflow}
+Jednoznačná definice workflow neexistuje, jelikož každá oblast, ve které je workflow používáno, si ho definuje po svém. Obecně je ale možné definovat workflow jako proces automatizace podnikových procesů. O sjednocení této terminologie se již v roce 1996 pokusila institut Workflow Management Coalition (WfMC), kdy vydal terminologický slovník, ve kterém je workflow definováno takto: 
+
+Workflow zanamená automatizaci celého nebo části podnikového procesu, během kterého jsou dokumenty, informace nebo úkoly předávány od jednoho účastníka procesu k druhému podle sady procedurálních pravidel tak, aby se dosáhlo nebo přispělo k plnění celkových/globálních podnikových cílů. \cite{wfmc}
+
+V počítačových systémech je workflow definováno jako systém řízení workflow. V tomto systému je možné workflow definovat, vytvořit a celý průběh procesu řídit. Mezi jeho úkoly patří provádět definici procesu, komunikovat s účastníky workflow, případně spouštět další aplikace nutné k vykonání workflow.
 
 
+\section{Typy workflow systému}
+Workflow systémy se mohou dělit do několika skupin podle různých hledisek či typů. 
+
+\subsection{Hledisko charakteru procesů}
+\begin{itemize}
+\item \textbf{Administrativní} workflow systémy jsou určeny k vyřizování běžných administrativních úkonů, které jsou většinou jednoduché, opakující se a dobře strukturované.
+\item \textbf{Ad-hoc} workflow systémy jsou založeny na náhodnosti vzniku. Procesy bývají jedinečné a je nutné je definovat až při jejich vzniku.
+\item \textbf{Kolaborativní} workflow systémy podporují především týmovou spolupráci. Zde je typickým znakem existence nějakého dokumentu, skrze který si uživatelé vyměňují poznatky a většinou se tento dokument stává i výsledkem společné práce. Často obsahuje opakovaní několika iterací stejného kroku dokud nedojde ke shodě.
+\item \textbf{Produkční} workflow systémy podporují hlavní podnikové procesy, které vytvářejí přidanou hodnotu k finálnímu produktu.
+\end{itemize}
+
+\subsection{Hledisko orientace procesů}
+\begin{itemize}
+\item \textbf{Procesy orientované na lidi.} U těchto systémů spolehájí účastníci sami na sebe. Předávané informace jsou proměnlivé a procesy nejednotné a špatně předpověditelné. Z těchto důvodů jsou průběhy závislé na jednotlivcích.
+\item \textbf{Procesy orientované na sebe.} Tyto systémy jsou zaměřené na klíčové procesy, které obvykle bývají hlavními aktivitami podniku. Jejich pravidla řešení a jejich zpracování jsou pevně daná.
+\end{itemize}
+
+\subsection{Hledisko techologické infrastruktury}
+Podle technologické infrastruktury, nad kterou je systém workflow postaven, lze produkty rozdělit do několika skupin.
+\begin{itemize}
+\item Založené na \textbf{elektronické poště} -- využívají dostupné emailové servery. Uživatelé nepotřebují speciální software.
+\item Založené na \textbf{procesech} -- mohou implementovat vlastní komunikační mechanismus a jsou postaveny na určitém databázovém systému. Bývají tvořeny jako komplexní řešení uceleného konceptu workflow.
+\item Založené na \textbf{webu} -- využívají jednotného rozhraní intranetové aplikace. Je to univerzální platforma pro sdílení informací.
+\item Založené na \textbf{dokumentech} -- tyto systémy byly motivovány představou o směrování dokumentů. Využívají systémy pro správu dokumentů.
+\end{itemize}
 
 \chapter{Vzorová kapitola}
 \section{Vzorová sekce}
@@ -228,6 +257,9 @@ GÁLA, L. et al. \textit{Podniková informatika}. 1. vyd. Praha: Grada Publishin
 
 \bibitem{portlets-in-action}
 SARIN, Ashish. \textit{Portlets in action}, Shelter Island, NY: Manning, 2011.
+
+\bibitem{wfmc}
+\textit{Terminology \& Glossary}, Workflow Management Coalition, dostupný na \url{http://www.wfmc.org/standards/docs/TC-1011_term_glossary_v3.pdf} [cit. 2014-04-14].
 
 \bibitem{workflow}
 CARDA, A., KUNSTOVÁ, R. \textit {Workflow : Nástroj manažera pro řízení podnikových procesů}. 2. vyd. Praha: Grada Publishing, 2003.

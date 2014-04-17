@@ -185,7 +185,7 @@ V počítačových systémech je workflow definováno jako systém řízení wor
 
 
 \section{Typy workflow systému}
-Workflow systémy se mohou dělit do několika skupin podle různých hledisek či typů. 
+Workflow systémy se mohou dělit do několika skupin podle různých hledisek či typů. \cite{workflow}
 
 \subsection{Hledisko charakteru procesů}
 \begin{itemize}
@@ -210,28 +210,70 @@ Podle technologické infrastruktury, nad kterou je systém workflow postaven, lz
 \item Založené na \textbf{dokumentech} -- tyto systémy byly motivovány představou o směrování dokumentů. Využívají systémy pro správu dokumentů.
 \end{itemize}
 
-\chapter{Vzorová kapitola}
-\section{Vzorová sekce}
-\subsection{Vzorová podsekce}
+\section{Obecný model workflow systému}
+Institut WfMC vytvořil obecný model, kde mají produkty podobné komponenty viz obr. 4.1. Jednotlivé komponenty systému se dělí na programové a datové.
 
+\begin{figure}[htp]
+\centering
+\includegraphics[width=340px]{images/obecny_model.png}
+\caption{Obecný model workflow (převzato z \cite{wfmc})}
+\end{figure}
 
+Programové komponenty.
 
 \begin{itemize}
-\item vzorový seznam
+\item Nástroj pro definici procesů (definition tool) umožňuje definovat procesy, přiřazovat role a stanovat pravidla.
+\item Výkonné jádro workflow (workflow engine) řídí průběh workflow procesů, spouští nutné externí aplikace a udržuje statistiky o průběhu workflow.
+\item Správce úkolů (worklist handler) má jako hlavní úkol zprostředkovávat komunikaci mezi jádrem workflow a jednotlivými uživateli.
+\item Uživatelské rozhraní (user interface) zajišťuje komunikaci mezi správcem úkolů a uživatelem. Často tvoří jeden celek spolu se správcem úkolů.
 \end{itemize}
 
+Datové komponenty.
 
-\begin{table}
+\begin{itemize}
+\item Definice procesu (process definition) popisuje strukturu procesu.
+\item Řídící data workflow (workflow control data) jsou interní data, které zpracovává jádro systému.
+\item Aplikační data workflow (workflow application data) jsou specifická data aplikací.
+\item Věcná data workflow (workflow relevant data) jsou data používaná jádrem k vyhodnocování dalších kroků.
+\item Seznam úkolů (work list) představuje datovou strukturu, ve které jsou uloženy úkoly pro uživatele. Mohou být viditelné všechny najednou, nebo mu úkoly mohou být poskytovány postupně.
+\item Model organizační struktury (organization/role model) popisuje organizační strukturu podniku. Pokud není definován, musí být úkoly přiřazovány pouze konktrétním uživatelům.
+\end{itemize}
+
+\subsection{Fáze workflow}
+Obecně jsou rozlišovány dvě fáze workflow: fáze návrhu workflow a fáze průběhu workflow. \cite{workflow}
+
+Fáze návrhu workflow v sobě zahrnuje funkce pro návrh a definici procesu, které jsou poskytovány analytickými a modelovacími nástroji. Ty umožňují převod procesu z reálného světa do normalizované podoby. Výsledkem je počítačově zpracovatelný popis procesu ve smyslu: kdo, kdy, co, s čím, za jakým účelem a jak má udělat.
+
+Fáze průběhu workflow se dále dělí na funkce pro řízení běhu procesu, které zabezpečují interpretaci procesu, spouštění, provádění a kontrolu průběhu jednotlivých činností. Další část této fáze představuje interakce s uživateli a aplikačními nástroji. To například znamená předávání úkolů ke zpracování, vyžádání manuální činnosti, automatické spouštění jiných aplikací či předávání dat mezi aplikacemi.
+
+Vše znárorněno na následujícím obrázku.
+
+\begin{figure}[htp]
 \centering
-\begin{tabular}{|p{3cm}|p{8cm}|}
-\hline Sloupec 1 & Sloupec 2 \\
-\hline Položka 2 & položka 2 \\
-\hline
-\end{tabular}
-\caption{Vybrané skupinové adresy (převzato z \cite{satrapa-ipv6})}
-\end{table}
+\includegraphics[width=340px]{images/faze_workflow.png}
+\caption{Fáze workflow (převzato z \cite{wfmc})}
+\end{figure}
+
+\chapter{Liferay a workflow}
+Portál Liferay implementuje služby pro workflow tak, že může být využito skrze celý portál a může být využito jak pro publikování webového obsahu, schválování článku blogu, pro práci s dokumenty a v dalších oblastech.
+
+Liferay je v základní edici dodáván s workflow systémem Kaleo, který je jednoduchý a snadnou použitelný a plně dostačuje k základnímu použití pro práci s webovým obsahem nebo pro práci s dokumenty. Pro složitější a komplexenější workflow umžňuje Liferay využít i jiné a rozsáhlejší workflow systému, jako například Activiti nebo JBoss's jBPM. Vždy ale musí být použit na portálu právě jeden workflow systém, proto je nutné před nasazením zvolit ten nejvhodnější.
+
+\section{Activiti}
+
+\section{JBoss's jBPM}
+
+\section{Kaleo}
+
+\section{Závěrečná volba workflow systému}
+
+\chapter{Analýza a návrh grafického designeru}
 
 
+
+
+
+\chapter{Závěr}
 
 %\printindex
 
@@ -272,9 +314,6 @@ CARDA, A., KUNSTOVÁ, R. \textit {Workflow : Nástroj manažera pro řízení po
 
 \newpage
 \appendix
-\chapter{Položky seznamu}
-asdfsadf
-
 \chapter{Položky seznamu}
 asdfsadf
 

@@ -14,8 +14,13 @@
 \BOOKMARK [2][-]{subsection.4.1.1}{ Hledisko charakteru procesu}{section.4.1}% 14
 \BOOKMARK [2][-]{subsection.4.1.2}{ Hledisko orientace procesu}{section.4.1}% 15
 \BOOKMARK [2][-]{subsection.4.1.3}{ Hledisko techologick\351 infrastruktury}{section.4.1}% 16
-\BOOKMARK [0][-]{chapter.5}{Vzorov\341 kapitola}{}% 17
-\BOOKMARK [1][-]{section.5.1}{ Vzorov\341 sekce}{chapter.5}% 18
-\BOOKMARK [2][-]{subsection.5.1.1}{ Vzorov\341 podsekce}{section.5.1}% 19
-\BOOKMARK [0][-]{appendix.A}{Polo\236ky seznamu}{}% 20
-\BOOKMARK [0][-]{appendix.B}{Polo\236ky seznamu}{}% 21
+\BOOKMARK [1][-]{section.4.2}{ Obecn\375 model workflow syst\351mu}{chapter.4}% 17
+\BOOKMARK [2][-]{subsection.4.2.1}{ F\341ze workflow}{section.4.2}% 18
+\BOOKMARK [0][-]{chapter.5}{Liferay a workflow}{}% 19
+\BOOKMARK [1][-]{section.5.1}{ Activiti}{chapter.5}% 20
+\BOOKMARK [1][-]{section.5.2}{ JBoss's jBPM}{chapter.5}% 21
+\BOOKMARK [1][-]{section.5.3}{ Kaleo}{chapter.5}% 22
+\BOOKMARK [1][-]{section.5.4}{ Z\341verecn\341 volba workflow syst\351mu}{chapter.5}% 23
+\BOOKMARK [0][-]{chapter.6}{Anal\375za a n\341vrh grafick\351ho designeru}{}% 24
+\BOOKMARK [0][-]{chapter.7}{Z\341ver}{}% 25
+\BOOKMARK [0][-]{appendix.A}{Polo\236ky seznamu}{}% 26

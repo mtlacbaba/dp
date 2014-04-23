@@ -254,18 +254,96 @@ Vše znárorněno na následujícím obrázku.
 \caption{Fáze workflow (převzato z \cite{wfmc})}
 \end{figure}
 
-\chapter{Liferay a workflow}
+\chapter{BPMN}
+Buisiness Process Model And Notation (BPMN) je standard pro modelování podnikových procesů, jehož výstupem bývá grafické znázornění podnikových procesů v podobě procesních diagramů. \cite{bpmn} Jazyk BPMN také pomáhá sjednocovat významy základních pojmů používaných v této oblasti procesního řízení. 
+
+Hlavním účelem BPMN je podporovat procesní řízení. Pro tuto funkci poskytuje notaci, která je jednoduchá, srozumitelná a intuitivní i pro netechnické pracovníky a zároveň dostatečná i pro vyjádření komplexních procesů. Přináší tedy standardizovaný zápis ve srozumitelné podobě pro všechny zainteresované osoby v organizacích.
+
+Poslední verze BPMN 2.0 byla vydána v lednu 2011 a klade si za cíl být jedinou notací pro tvorbu modelů podnikových procesů. Proto mezi základními rysy jsou:
+\begin{itemize}
+\item snaha vytvořit jednotný konzistentní jazyk sjednocením definice podnikových procesů BPMN,
+\item možnost vytvořit nezávislý nebo integrovaný model,
+\item podpora a možnost výměny odlišných pohledů na procesní model tak, že je možno se v procesu zaměřit na slabá místa,
+\item poskytnout xml schémata sloužící pro transformaci modelů.
+\end{itemize}
+
+\section{Základní notace}
+Objekty jazyka BPMN jsou děleny do těchto základních kategorií. Tokové objekty, spojovací objekty, plavecké dráhy a artefakty. \cite{12}
+
+\subsection{Tokové objekty}
+Bývají označovány jako hlavní grafické prvky definující firemní procesy a dále se dělí.
+
+\begin{itemize}
+\item Události představují děje či události, ke kterým dochází v průběhu procesu.
+\item Aktivity vyjadřují činnosti, které se odehrávají uvnitř procesu. Ty se dále dělí úlohy a podprocesy.
+\item Brány jsou využívány pro zobrazení větvení a slučování toků a procesů, kdy je potřeba zohlednit různé podmínky. Dále jsou děleny na exkluzivní, inkluzivní a paralelní.
+\end{itemize}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=210px]{images/tokove_objekty.png}
+\caption{Tokové objekty}
+\end{figure}
+
+
+\subsection{Spojovací objekty}
+Spojové objekty slouží ke spojování tokových objektů. Dělí se na sekvenční tok, tok zpráv a asociaci.
+
+\begin{itemize}
+\item Sekvenční tok znázorňuje posloupnost procesních toků v bazénu nebo podprocesu. Zdrojem a cílem je vždy nějaký tokový objekt. 
+\item Tok zpráv označuje zprávy proudící přes hranice bazénů.
+\item Asociace se používá pro připojení artefaktů nebo textu k tokovým objektům.
+\end{itemize}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=210px]{images/spojovaci_objekty.png}
+\caption{Spojovací objekty}
+\end{figure}
+
+
+\subsection{Plavecké dráhy}
+Plavecké dráhy, někdy nazývané kontexty, slouží k organizování a kategorizaci činností. Rozlišují se typy: bazén a dráha.
+
+\begin{itemize}
+\item Bazén odděluje různé části popisované organizace.
+\item Dráhy jsou součástí bazénu a používají se ke kategorizaci činností v rámci bazénu.
+\end{itemize}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=340px]{images/bazen.png}
+\caption{Bazén}
+\end{figure}
+
+\subsection{Artefakty}
+Artefakty umožňují přidávat další informace do modelu a tím rozšiřují dostupné elementy v BPMN. Tím mohou zvyšovat informační hodnotu modelu. Existují tyto artefakty: datové objekty, skupiny a anotace.
+
+\begin{itemize}
+\item Datové objekty reprezentují nezbytná data pro vykonání dané činnosti.
+\item Skupiny jsou využívány pro seskupení různých aktivit.
+\item Anotace dodávají modelu srozumitelnost a přehlednost.
+\end{itemize}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=340px,height=70px]{images/artefakty.png}
+\caption{Artefakty}
+\end{figure}
+
+\chapter{Volba workflow engine pro Liferay}
 Portál Liferay implementuje služby pro workflow tak, že může být využito skrze celý portál a může být využito jak pro publikování webového obsahu, schválování článku blogu, pro práci s dokumenty a v dalších oblastech.
 
 Liferay je v základní edici dodáván s workflow systémem Kaleo, který je jednoduchý a snadnou použitelný a plně dostačuje k základnímu použití pro práci s webovým obsahem nebo pro práci s dokumenty. Pro složitější a komplexenější workflow umžňuje Liferay využít i jiné a rozsáhlejší workflow systému, jako například Activiti nebo JBoss's jBPM. Vždy ale musí být použit na portálu právě jeden workflow systém, proto je nutné před nasazením zvolit ten nejvhodnější.
 
-\section{Activiti}
+\begin{itemize}
+\item Activiti. Projekt Activiti vznikl v roce 2010 a jeho cílem bylo vytvořit svobodné výkonné jádro workflow, které bude podporovat specifikaci BPMN 2.0. Toto výkonné jádro může být využíváno samostatně nebo může být vloženo do jiného systému.
+\item JBoss's jBPM.
+\item Kaleo.
+\end{itemize}
 
-\section{JBoss's jBPM}
+\subsection{Activiti}
 
-\section{Kaleo}
-
-\section{Závěrečná volba workflow systému}
 
 \chapter{Analýza a návrh grafického designeru}
 
@@ -306,7 +384,8 @@ SARIN, Ashish. \textit{Portlets in action}, Shelter Island, NY: Manning, 2011.
 \bibitem{workflow}
 CARDA, A., KUNSTOVÁ, R. \textit {Workflow : Nástroj manažera pro řízení podnikových procesů}. 2. vyd. Praha: Grada Publishing, 2003.
 
-
+\cite{bpmn}
+\textit{Business Process Model and Notation (BPMN)}, Object Management Group, Inc., dostupný na \url{http://www.omg.org/spec/BPMN/2.0/} [cit. 2014-04-23]
 
 
 \end{thebibliography}

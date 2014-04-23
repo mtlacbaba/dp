@@ -17,11 +17,14 @@
 \contentsline {subsection}{\numberline {4.1.3}\rmfamily Hledisko techologick\IeC {\'e} infrastruktury}{11}{subsection.4.1.3}
 \contentsline {section}{\numberline {4.2}\slshape Obecn\IeC {\'y} model workflow syst\IeC {\'e}mu}{11}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}\rmfamily F\IeC {\'a}ze workflow}{13}{subsection.4.2.1}
-\contentsline {chapter}{\numberline {5}\bfseries Liferay a workflow}{15}{chapter.5}
-\contentsline {section}{\numberline {5.1}\slshape Activiti}{15}{section.5.1}
-\contentsline {section}{\numberline {5.2}\slshape JBoss's jBPM}{15}{section.5.2}
-\contentsline {section}{\numberline {5.3}\slshape Kaleo}{15}{section.5.3}
-\contentsline {section}{\numberline {5.4}\slshape Z\IeC {\'a}v\IeC {\v e}re\IeC {\v c}n\IeC {\'a} volba workflow syst\IeC {\'e}mu}{15}{section.5.4}
-\contentsline {chapter}{\numberline {6}\bfseries Anal\IeC {\'y}za a n\IeC {\'a}vrh grafick\IeC {\'e}ho designeru}{16}{chapter.6}
-\contentsline {chapter}{\numberline {7}\bfseries Z\IeC {\'a}v\IeC {\v e}r}{17}{chapter.7}
-\contentsline {chapter}{\numberline {A}\bfseries Polo\IeC {\v z}ky seznamu}{19}{appendix.A}
+\contentsline {chapter}{\numberline {5}\bfseries BPMN}{15}{chapter.5}
+\contentsline {section}{\numberline {5.1}\slshape Z\IeC {\'a}kladn\IeC {\'\i } notace}{15}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}\rmfamily Tokov\IeC {\'e} objekty}{15}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}\rmfamily Spojovac\IeC {\'\i } objekty}{16}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}\rmfamily Plaveck\IeC {\'e} dr\IeC {\'a}hy}{17}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}\rmfamily Artefakty}{17}{subsection.5.1.4}
+\contentsline {chapter}{\numberline {6}\bfseries Volba workflow engine pro Liferay}{18}{chapter.6}
+\contentsline {subsection}{\numberline {6.0.5}\rmfamily Activiti}{18}{subsection.6.0.5}
+\contentsline {chapter}{\numberline {7}\bfseries Anal\IeC {\'y}za a n\IeC {\'a}vrh grafick\IeC {\'e}ho designeru}{19}{chapter.7}
+\contentsline {chapter}{\numberline {8}\bfseries Z\IeC {\'a}v\IeC {\v e}r}{20}{chapter.8}
+\contentsline {chapter}{\numberline {A}\bfseries Polo\IeC {\v z}ky seznamu}{22}{appendix.A}

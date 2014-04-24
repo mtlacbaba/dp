@@ -85,21 +85,13 @@ Community Edition je bezplatná verze portálu, která je volně dostupná ke st
 
 Ihned po instalaci portálu je k dispozici množství již předinstalovaných portletů. Je možné například ihned využívat wiki, fórům, kalendář, galerii obrázků. Liferay portál podporuje různé způsoby, jak jej lze upravovat či rozšiřovat. Pro změnu vzhledu můžeme využít témata či šablony, dále funkcionalitu portálu je možno rozšířit pomocí portletů, měnit vlastnoti portálu či portletů je umožněno díky tzv. hooks a větší a zásadnější změny přímo v jádru portálu se provádí pomocí pluginu Ext. \cite{developer-guide}
 
-Mezi hlavní a důežité vlastnosti portálu Liferay bývají nejčastěji řazeny tyto: \cite{liferay-features}
-\begin{itemize}
-\item zabezpečené jednotné přihlášení,
-\item nástroje pro správu workflow,
-\item snadná instalce samotného portálu i nových aplikací a rozšíření,
-\item od verze 6.1 CE GA2 umožňuje instalaci rozšíření a aplikcí z Liferay Marketplace,
-\item obsahuje systém pro správu obsahu (Liferay CMS), který umožňuje oprávněným uživatelům vytvářet a spravovat obsah webu přímo z prohlížeče i bez znalosti programování,
-\item vícejazyčné uživatelské rozhraní,
-\item personalizace portálových stránek,
-\item jednoduchá úpráva stránek způsobem táhni a pusť,
-\item umožňuje dělit uživavatele do organizací, či do skupin uživatelů a podle těchto rolí zobrazovat různý obsah či aplikace,
-\item automatické nahrávání souborů,
-\item podpora pro různé platformy - různé aplikační servery, operační systémy a databáze,
-\item podporuje různé metody integrace včetně SOAP, REST, RSS a také různá proprietární rozhraní.
-\end{itemize}
+Portál Liferay nabízí svým uživatelům zabezpečené jednotné přihlášení, nástroje pro správu workflow, snadnou instalaci samotného portálu i dalších nových aplikací a rozšíření. Od verze 6.1 CE GA2 umožňuje instalaci rozšíření a aplikací nově také z Liferay Marketplace. Takto je možné stahovat aplikace přímo z rozhraní portálu.
+
+Liferay také obsahuje pokročilý systém pro správu obsahu (Liferay CMS), který umožňuje oprávněným uživatelům vytvářet a správovat obsah webu přímo z prohlížeče a to i bez znalosti programování. S tím také souvisí možnost dělit uživatele do organizací, skupin a uživatelům přidělovat role, podle kterých jim následně zobrazovat různý obsah, aplikace a umožňovat provádět různé akce.
+
+Mezi další vlastnosti portálu patří vícejazyčné uživatelské rozhraní, personalizace portálových stránek, jednoduchá úprava stránek způsobem táhni a pusť, automatické nahrávání souborů.
+
+Liferay také podporuje různé platformy a proto je možné ho provozovat na různých aplikačních serverech, operačních systémech a databázích. Také podporuje různé metody integrace včetně SOAP, REST, RSS a také další proprietární rozhraní.\cite{liferay-features}
 
 To jsou některé z důvodů, proč se podnikový portál Liferay stal rožšířenou a oblíbenou platformou pro vývoj firemních webů a systému v jazyce Java.
 
@@ -332,6 +324,8 @@ Artefakty umožňují přidávat další informace do modelu a tím rozšiřují
 \end{figure}
 
 \chapter{Volba workflow engine pro Liferay}
+
+
 Portál Liferay implementuje služby pro workflow tak, že může být využito skrze celý portál a může být využito jak pro publikování webového obsahu, schválování článku blogu, pro práci s dokumenty a v dalších oblastech.
 
 Liferay je v základní edici dodáván s workflow systémem Kaleo, který je jednoduchý a snadnou použitelný a plně dostačuje k základnímu použití pro práci s webovým obsahem nebo pro práci s dokumenty. Pro složitější a komplexenější workflow umžňuje Liferay využít i jiné a rozsáhlejší workflow systému, jako například Activiti nebo JBoss's jBPM. Vždy ale musí být použit na portálu právě jeden workflow systém, proto je nutné před nasazením zvolit ten nejvhodnější.

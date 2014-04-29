@@ -55,6 +55,18 @@ Oficiální zadání
 
 Popsat principy tvorby podnikových portálů. Zaměřit se zejména na otázku implementace workflow pro procesy pracující s vnitropodnikovými dokomenty. Pro Liferay Portal verze CE analyzovat, navrhnout, implementovat, otestovat a zdokumentovat vlastní grafický workflow editor pracující v základní notaci BPMN, který bude plně kompatibilní se standardním workflow systémem, který je součástí Liferay Potral CE. Výstup bude mít podobu funkčního prototypu.
 
+
+
+
+
+
+
+
+
+
+
+
+
 \chapter{Podnikové portály}
 
 Pojem portál bývá definován různými způsoby v závislosti na situaci, ve které je používán. Dříve se portály zaměřovaly hlavně a jenom kolem jednotného přístupu k informacím nezávisle na jejich původu a umístění. S~dalším vývojem informačních technologií se postupně tento přístup dále rozšiřoval a~do definice portálu přibyly pojmy jako integrace a agregace služeb a aplikací. 
@@ -94,6 +106,20 @@ Mezi další vlastnosti portálu patří vícejazyčné uživatelské rozhraní,
 Liferay také podporuje různé platformy a proto je možné ho provozovat na různých aplikačních serverech, operačních systémech a databázích. Také podporuje různé metody integrace včetně SOAP, REST, RSS a také další proprietární rozhraní.\cite{liferay-features}
 
 To jsou některé z důvodů, proč se podnikový portál Liferay stal rožšířenou a oblíbenou platformou pro vývoj firemních webů a systému v jazyce Java.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \chapter{Vývoj portletů}
 V této kapitole bude popsán vývoj portletů, které tvoří obsah portálů.
@@ -167,6 +193,23 @@ Portletová specifikace definuje tři základní stavy.
 
 \subsection{Struktura poprtálové aplikace}
 Portálové aplikace jsou uloženy ve standardní archivním souboru jazyka Java, Web ARchive (WAR). Mohou obsahovat více portletů, servlety, JSP soubory a další. Musí obsahovat webový deskriptor a také navíc portletový deskriptor implementace \verb|portlet.xml|.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \chapter{Workflow}
 Jednoznačná definice workflow neexistuje, jelikož každá oblast, ve které je workflow používáno, si ho definuje po svém. Obecně je ale možné definovat workflow jako proces automatizace podnikových procesů. O sjednocení této terminologie se již v roce 1996 pokusila institut Workflow Management Coalition (WfMC), kdy vydal terminologický slovník, ve kterém je workflow definováno takto: 
@@ -246,6 +289,15 @@ Vše znárorněno na následujícím obrázku.
 \caption{Fáze workflow (převzato z \cite{wfmc})}
 \end{figure}
 
+\section{Workflow pro procesy pracující s vnitropodnikovými dokumenty}
+
+Z pohledu charakteru procesů řadíme workflow pro procesy pracující s dokumenty do administrativních workflow. Většinou jsou to již procesy ustálené, dobře strukturované a tyto procesy jsou vyutžívány většinou uživatelů systému. Z hlediska technologické infrastruktury jsou to systémy založené na dokumentech. Z hlediska orientace procesů patří do procesů orientovaných na sebe, jsou pro něj totiž typické vlastnosti jako předpověditelnost, strukturovanost, stálý postupu a je aktivován dokumenty.
+
+
+
+
+
+
 \chapter{BPMN}
 Buisiness Process Model And Notation (BPMN) je standard pro modelování podnikových procesů, jehož výstupem bývá grafické znázornění podnikových procesů v podobě procesních diagramů. \cite{bpmn} Jazyk BPMN také pomáhá sjednocovat významy základních pojmů používaných v této oblasti procesního řízení. 
 
@@ -323,23 +375,28 @@ Artefakty umožňují přidávat další informace do modelu a tím rozšiřují
 \caption{Artefakty}
 \end{figure}
 
-\chapter{Volba workflow engine pro Liferay}
 
 
-Portál Liferay implementuje služby pro workflow tak, že může být využito skrze celý portál a může být využito jak pro publikování webového obsahu, schválování článku blogu, pro práci s dokumenty a v dalších oblastech.
+\chapter{Grafický editor pro tvorbu workflow}
+Výstupem této diplomvé práce grafický editor pro návrh workflow, který bude pracovat v základní notaci BPMN a bude kompatibilní se standardním workflow systémem Kaleo, který je součástí Liferay Portal CE. V této kapitole budou nejprve představeny existující grafické editory pro konkureční worflow systémy. Pak budou představeny požadavky na nový workflow editor.
 
-Liferay je v základní edici dodáván s workflow systémem Kaleo, který je jednoduchý a snadnou použitelný a plně dostačuje k základnímu použití pro práci s webovým obsahem nebo pro práci s dokumenty. Pro složitější a komplexenější workflow umžňuje Liferay využít i jiné a rozsáhlejší workflow systému, jako například Activiti nebo JBoss's jBPM. Vždy ale musí být použit na portálu právě jeden workflow systém, proto je nutné před nasazením zvolit ten nejvhodnější.
+\section{Activiti designer}
+Prvním používáným workflow systémem, který je možno použít v Liferay portálu je Activiti. Activiti se prezentuje jako jednoduché workflow, podporující standard BPMN 2. Tento projekt je šířen jako open-source pod licencí Apache license. Tento systém obsahuje několik nástrojů, které tvoří celou platformu Activiti a jsou to Activiti Engine, Activiti Modeler, Activiiti Designer, Activiti Explorer, Activiti Cycle a Activiti REST.
 
-\begin{itemize}
-\item Activiti. Projekt Activiti vznikl v roce 2010 a jeho cílem bylo vytvořit svobodné výkonné jádro workflow, které bude podporovat specifikaci BPMN 2.0. Toto výkonné jádro může být využíváno samostatně nebo může být vloženo do jiného systému.
-\item JBoss's jBPM.
-\item Kaleo.
-\end{itemize}
+Z pohledu této práce je podstatný Activiti Modeler, což je nástroj na modelování procesů implementovaný ve webovém prostředí.
 
-\subsection{Activiti}
 
 
 \chapter{Analýza a návrh grafického designeru}
+\section{Požadavky na desinger}
+
+V rámci diplomové práce bude vytvořen grafický workflow editor, který bude splňovat následující požadavky:
+
+\begin{itemize}
+\item bude používat základní notaci BPMN
+\item bude kompatibilní se standardním workflow systémem - zbytečné srovnávat workflow enginy pro liferay, jenom srovnat jednotlivé designery
+\item
+\end{itemize}
 
 
 

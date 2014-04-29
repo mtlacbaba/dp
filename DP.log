@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.27)  24 APR 2014 21:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.27)  29 APR 2014 23:45
 entering extended mode
 **C:/Users/IB/Documents/dp/dp/DP.tex
 (C:/Users/IB/Documents/dp/dp/DP.tex
@@ -578,14 +578,14 @@ Kapitola 1.
 
 ]
 Kapitola 2.
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 66.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 78.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 66.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 78.
 
-Overfull \hbox (0.6368pt too wide) in paragraph at lines 70--71
+Overfull \hbox (0.6368pt too wide) in paragraph at lines 82--83
 \T1/lmr/m/n/10.95 for-ma£-ním a zna-lost-ním zdro-j·m v or-ga-ni-zaci. Je-jich 
 cí-lem je zp°ístup-
  []
@@ -600,38 +600,38 @@ Overfull \vbox (5.4374pt too high) has occurred while \output is active []
 
 Package hyperref Warning: Composite letter `\textasciicaron+r'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 76.
+(hyperref)                removing `\textasciicaron' on input line 88.
 
 [4] [5]
 Kapitola 3.
 
 Package hyperref Warning: Composite letter `\textring+u'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textring' on input line 98.
+(hyperref)                removing `\textring' on input line 124.
 
-<images/vytvareni_stranky_v_portalu.png, id=226, 357.7365pt x 162.00525pt>
+<images/vytvareni_stranky_v_portalu.png, id=236, 357.7365pt x 162.00525pt>
 File: images/vytvareni_stranky_v_portalu.png Graphic file (type png)
 
 <use images/vytvareni_stranky_v_portalu.png>
 Package pdftex.def Info: images/vytvareni_stranky_v_portalu.png used on input l
-ine 108.
+ine 134.
 (pdftex.def)             Requested size: 341.27625pt x 154.5567pt.
  [6
 
  <C:/Users/IB/Documents/dp/dp/images/vytvareni_stranky_v_portalu.png>]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 125.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 151.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (0.88214pt too wide) in paragraph at lines 125--126
+Overfull \hbox (0.88214pt too wide) in paragraph at lines 151--152
 \T1/lmr/m/n/10.95 votní cyk-lus port-letu - []\T1/lmtt/m/n/10.95 init(), proces
 sAction(), render(), destroy()\T1/lmr/m/n/10.95 . 
  []
 
 [7]
-Overfull \hbox (14.32567pt too wide) in paragraph at lines 157--158
+Overfull \hbox (14.32567pt too wide) in paragraph at lines 183--184
 []\T1/lmr/m/n/10.95 Ve t°íd¥ []\T1/lmtt/m/n/10.95 GenericPortlet \T1/lmr/m/n/10
 .95 jsou k t¥mto ú£e-l·m de-fi-no-vány me-tody []\T1/lmtt/m/n/10.95 doView()\T1
 /lmr/m/n/10.95 ,
@@ -642,7 +642,7 @@ Kapitola 4.
 
 Package hyperref Warning: Composite letter `\textring+u'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textring' on input line 182.
+(hyperref)                removing `\textring' on input line 225.
 
 [10
 
@@ -650,69 +650,71 @@ Package hyperref Warning: Composite letter `\textring+u'
 
 Package hyperref Warning: Composite letter `\textring+u'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textring' on input line 190.
+(hyperref)                removing `\textring' on input line 233.
 
-<images/obecny_model.png, id=258, 356.532pt x 433.62pt>
+<images/obecny_model.png, id=268, 356.532pt x 433.62pt>
 File: images/obecny_model.png Graphic file (type png)
 
 <use images/obecny_model.png>
-Package pdftex.def Info: images/obecny_model.png used on input line 210.
+Package pdftex.def Info: images/obecny_model.png used on input line 253.
 (pdftex.def)             Requested size: 341.27625pt x 415.09935pt.
  [11] [12 <C:/Users/IB/Documents/dp/dp/images/obecny_model.png>] [13]
-<images/faze_workflow.png, id=275, 376.40625pt x 278.84175pt>
+<images/faze_workflow.png, id=285, 376.40625pt x 278.84175pt>
 File: images/faze_workflow.png Graphic file (type png)
 
 <use images/faze_workflow.png>
-Package pdftex.def Info: images/faze_workflow.png used on input line 245.
+Package pdftex.def Info: images/faze_workflow.png used on input line 288.
 (pdftex.def)             Requested size: 341.27625pt x 252.83585pt.
  [14 <C:/Users/IB/Documents/dp/dp/images/faze_workflow.png>]
 Kapitola 5.
 
-LaTeX Warning: Citation `bpmn' on page 15 undefined on input line 250.
+LaTeX Warning: Citation `bpmn' on page 15 undefined on input line 302.
 
 
-LaTeX Warning: Citation `12' on page 15 undefined on input line 263.
+LaTeX Warning: Citation `12' on page 15 undefined on input line 315.
 
 [15
 
-] <images/tokove_objekty.png, id=287, 164.11313pt x 58.71938pt>
+] <images/tokove_objekty.png, id=297, 164.11313pt x 58.71938pt>
 File: images/tokove_objekty.png Graphic file (type png)
 
 <use images/tokove_objekty.png>
-Package pdftex.def Info: images/tokove_objekty.png used on input line 276.
+Package pdftex.def Info: images/tokove_objekty.png used on input line 328.
 (pdftex.def)             Requested size: 210.78827pt x 75.42035pt.
 
-<images/spojovaci_objekty.png, id=288, 157.33781pt x 63.23625pt>
+<images/spojovaci_objekty.png, id=298, 157.33781pt x 63.23625pt>
 File: images/spojovaci_objekty.png Graphic file (type png)
 
 <use images/spojovaci_objekty.png>
-Package pdftex.def Info: images/spojovaci_objekty.png used on input line 292.
+Package pdftex.def Info: images/spojovaci_objekty.png used on input line 344.
 (pdftex.def)             Requested size: 210.78827pt x 84.72357pt.
  [16 <C:/Users/IB/Documents/dp/dp/images/tokove_objekty.png> <C:/Users/IB/Docum
 ents/dp/dp/images/spojovaci_objekty.png>]
-<images/bazen.png, id=297, 1080.28593pt x 315.42844pt>
+<images/bazen.png, id=307, 1080.28593pt x 315.42844pt>
 File: images/bazen.png Graphic file (type png)
  <use images/bazen.png>
-Package pdftex.def Info: images/bazen.png used on input line 307.
+Package pdftex.def Info: images/bazen.png used on input line 359.
 (pdftex.def)             Requested size: 341.27625pt x 99.64444pt.
 
-<images/artefakty.png, id=298, 339.2675pt x 85.31876pt>
+<images/artefakty.png, id=308, 339.2675pt x 85.31876pt>
 File: images/artefakty.png Graphic file (type png)
 
 <use images/artefakty.png>
-Package pdftex.def Info: images/artefakty.png used on input line 322.
+Package pdftex.def Info: images/artefakty.png used on input line 374.
 (pdftex.def)             Requested size: 341.29079pt x 70.26645pt.
  [17 <C:/Users/IB/Documents/dp/dp/images/bazen.png> <C:/Users/IB/Documents/dp/d
 p/images/artefakty.png>]
 Kapitola 6.
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 339.
-
 [18
 
 ]
 Kapitola 7.
+
+Overfull \hbox (0.33365pt too wide) in paragraph at lines 397--399
+[]\T1/lmr/m/n/10.95 bude kom-pa-ti-bilní se stan-dard-ním work-flow sys-té-mem 
+- zby-te£né srov-
+ []
+
 [19
 
 ]
@@ -720,50 +722,50 @@ Kapitola 8.
 
 Package hyperref Warning: Composite letter `\textasciicaron+e'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 348.
+(hyperref)                removing `\textasciicaron' on input line 405.
 
 [20
 
 ]
-Underfull \hbox (badness 2460) in paragraph at lines 367--368
+Underfull \hbox (badness 2460) in paragraph at lines 424--425
 []\T1/lmr/m/it/10.95 Liferay Por-tal 6.2 De-ve-lo-per's Gu-ide\T1/lmr/m/n/10.95
  , Li-fe-ray Inc., do-stupný na
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--368
+Underfull \hbox (badness 10000) in paragraph at lines 424--425
 []$\T1/lmtt/m/n/10.95 http : / / www . liferay . com / documentation / liferay-
 []portal / 6 . 2 /$
  []
 
 
-LaTeX Warning: Citation `bpmn' on page 21 undefined on input line 381.
+LaTeX Warning: Citation `bpmn' on page 21 undefined on input line 438.
 
 [21
 
 ]
 P\v {r}\'{\i }loha A.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 394.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 451.
 [22
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 394.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 451.
  (C:\Users\IB\Documents\dp\dp\DP.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 394.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 394.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 451.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 451.
 Package rerunfilecheck Info: File `DP.out' has not changed.
-(rerunfilecheck)             Checksum: 03508B22FC955398B95E6B94D4DBB985;1987.
+(rerunfilecheck)             Checksum: 541D1876F9BB9FA2777A1F69F1CD39F0;2187.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 394.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 451.
  ) 
 Here is how much of TeX's memory you used:
- 6289 strings out of 493921
- 90905 string characters out of 3144885
- 171952 words of memory out of 3000000
- 9366 multiletter control sequences out of 15000+200000
+ 6293 strings out of 493921
+ 90943 string characters out of 3144885
+ 172952 words of memory out of 3000000
+ 9368 multiletter control sequences out of 15000+200000
  56333 words of font info for 41 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  30i,6n,31p,756b,400s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -780,9 +782,9 @@ Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/Program Files
 eX 2.9/fonts/type1/public/lm/lmro10.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
 lic/lm/lmtt10.pfb>
-Output written on DP.pdf (27 pages, 456060 bytes).
+Output written on DP.pdf (27 pages, 459084 bytes).
 PDF statistics:
- 453 PDF objects out of 1000 (max. 8388607)
- 81 named destinations out of 1000 (max. 500000)
- 288 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 463 PDF objects out of 1000 (max. 8388607)
+ 83 named destinations out of 1000 (max. 500000)
+ 304 words of extra memory for PDF output out of 10000 (max. 10000000)
 

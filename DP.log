@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.27)  8 MAY 2014 19:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.27)  12 MAY 2014 23:31
 entering extended mode
 **C:/Users/IB/Documents/dp/dp/DP.tex
 (C:/Users/IB/Documents/dp/dp/DP.tex
@@ -259,6 +259,35 @@ Now handling font encoding U ...
 (C:\Users\IB\Documents\dp\dp\fit11.clo
 File: fit11.clo 1998/03/30 fithesis (size option)
 ))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+\lst@mode=\count88
+\lst@gtempboxa=\box26
+\lst@token=\toks17
+\lst@length=\count89
+\lst@currlwidth=\dimen105
+\lst@column=\count90
+\lst@pos=\count91
+\lst@lostspace=\dimen106
+\lst@width=\dimen107
+\lst@newlines=\count92
+\lst@lineno=\count93
+\lst@maxwidth=\dimen108
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+\c@lstnumber=\count94
+\lst@skipnumbers=\count95
+\lst@framebox=\box27
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2014/03/04 1.5c listings configuration
+))
+Package: listings 2014/03/04 1.5c (Carsten Heinz)
+
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -308,11 +337,11 @@ Language: czech 2008/07/06 v3.1a Czech support from the babel system
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2008/07/08 v3.8m Babel common definitions
-\babel@savecnt=\count88
-\U@D=\dimen105
+\babel@savecnt=\count96
+\U@D=\dimen109
 )
 Package babel Info: Making " an active character on input line 172.
-\cs@wordlen=\count89
+\cs@wordlen=\count97
 Package babel Info: Making - an active character on input line 226.
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\cmap\cmap.sty"
@@ -321,10 +350,6 @@ Package: cmap 2008/03/06 v1.0h CMap support: searchable PDF
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks16
-)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
@@ -345,10 +370,10 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count90
+\Gread@gobject=\count98
 ))
-\Gin@req@height=\dimen106
-\Gin@req@width=\dimen107
+\Gin@req@height=\dimen110
+\Gin@req@width=\dimen111
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
@@ -414,16 +439,16 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen108
-\Hy@linkcounter=\count91
-\Hy@pagecounter=\count92
+\@linkdim=\dimen112
+\Hy@linkcounter=\count99
+\Hy@pagecounter=\count100
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count93
+\Hy@SavedSpaceFactor=\count101
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -437,17 +462,17 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count94
+\c@Hy@tempcnt=\count102
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen109
-\Fld@menulength=\count95
-\Field@Width=\dimen110
-\Fld@charsize=\dimen111
+\XeTeXLinkMargin=\dimen113
+\Fld@menulength=\count103
+\Field@Width=\dimen114
+\Fld@charsize=\dimen115
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -457,17 +482,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count96
-\c@Item=\count97
-\c@Hfootnote=\count98
+\Hy@abspage=\count104
+\c@Item=\count105
+\c@Hfootnote=\count106
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count99
-\c@bookmark@seq@number=\count100
+\Fld@listcount=\count107
+\c@bookmark@seq@number=\count108
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
@@ -477,52 +502,54 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip43
 )
 (C:\Users\IB\Documents\dp\dp\DP.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 30.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
+\c@lstlisting=\count109
+
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count101
-\scratchdimen=\dimen112
-\scratchbox=\box26
-\nofMPsegments=\count102
-\nofMParguments=\count103
-\everyMPshowfont=\toks17
-\MPscratchCnt=\count104
-\MPscratchDim=\dimen113
-\MPnumerator=\count105
-\makeMPintoPDFobject=\count106
-\everyMPtoPDFconversion=\toks18
+\scratchcounter=\count110
+\scratchdimen=\dimen116
+\scratchbox=\box28
+\nofMPsegments=\count111
+\nofMParguments=\count112
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count113
+\MPscratchDim=\dimen117
+\MPnumerator=\count114
+\makeMPintoPDFobject=\count115
+\everyMPtoPDFconversion=\toks19
 )
-\AtBeginShipoutBox=\box27
-Package hyperref Info: Link coloring OFF on input line 28.
+\AtBeginShipoutBox=\box29
+Package hyperref Info: Link coloring OFF on input line 30.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count107
+\c@section@level=\count116
 )
-LaTeX Info: Redefining \ref on input line 28.
-LaTeX Info: Redefining \pageref on input line 28.
-LaTeX Info: Redefining \nameref on input line 28.
+LaTeX Info: Redefining \ref on input line 30.
+LaTeX Info: Redefining \pageref on input line 30.
+LaTeX Info: Redefining \nameref on input line 30.
 
 (C:\Users\IB\Documents\dp\dp\DP.out) (C:\Users\IB\Documents\dp\dp\DP.out)
 \@outlinefile=\write3
@@ -582,46 +609,46 @@ Kapitola 1.
 
 Package hyperref Warning: Composite letter `\textasciicaron+r'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 70.
+(hyperref)                removing `\textasciicaron' on input line 72.
 
 [5] [6]
 Kapitola 2.
 
 Package hyperref Warning: Composite letter `\textring+u'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textring' on input line 91.
+(hyperref)                removing `\textring' on input line 93.
 
 <images/vytvareni_stranky_v_portalu.png, id=304, 357.7365pt x 162.00525pt>
 File: images/vytvareni_stranky_v_portalu.png Graphic file (type png)
 
 <use images/vytvareni_stranky_v_portalu.png>
 Package pdftex.def Info: images/vytvareni_stranky_v_portalu.png used on input l
-ine 101.
+ine 103.
 (pdftex.def)             Requested size: 341.27625pt x 154.5567pt.
  [7
 
  <C:/Users/IB/Documents/dp/dp/images/vytvareni_stranky_v_portalu.png>]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 110.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 112.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 110.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 118.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 112.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 120.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (0.88214pt too wide) in paragraph at lines 118--119
+Overfull \hbox (0.88214pt too wide) in paragraph at lines 120--121
 \T1/lmr/m/n/10.95 votní cyk-lus port-letu - []\T1/lmtt/m/n/10.95 init(), proces
 sAction(), render(), destroy()\T1/lmr/m/n/10.95 . 
  []
 
 [8]
-Overfull \hbox (14.32567pt too wide) in paragraph at lines 150--151
+Overfull \hbox (14.32567pt too wide) in paragraph at lines 152--153
 []\T1/lmr/m/n/10.95 Ve t°íd¥ []\T1/lmtt/m/n/10.95 GenericPortlet \T1/lmr/m/n/10
 .95 jsou k t¥mto ú£e-l·m de-fi-no-vány me-tody []\T1/lmtt/m/n/10.95 doView()\T1
 /lmr/m/n/10.95 ,
@@ -632,7 +659,7 @@ Kapitola 3.
 
 Package hyperref Warning: Composite letter `\textring+u'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textring' on input line 192.
+(hyperref)                removing `\textring' on input line 194.
 
 [11
 
@@ -640,47 +667,47 @@ Package hyperref Warning: Composite letter `\textring+u'
 
 Package hyperref Warning: Composite letter `\textring+u'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textring' on input line 200.
+(hyperref)                removing `\textring' on input line 202.
 
 <images/obecny_model.png, id=337, 356.532pt x 433.62pt>
 File: images/obecny_model.png Graphic file (type png)
 
 <use images/obecny_model.png>
-Package pdftex.def Info: images/obecny_model.png used on input line 220.
+Package pdftex.def Info: images/obecny_model.png used on input line 222.
 (pdftex.def)             Requested size: 341.27625pt x 415.09935pt.
  [12] [13 <C:/Users/IB/Documents/dp/dp/images/obecny_model.png>] [14]
 <images/faze_workflow.png, id=355, 376.40625pt x 278.84175pt>
 File: images/faze_workflow.png Graphic file (type png)
 
 <use images/faze_workflow.png>
-Package pdftex.def Info: images/faze_workflow.png used on input line 255.
+Package pdftex.def Info: images/faze_workflow.png used on input line 257.
 (pdftex.def)             Requested size: 341.27625pt x 252.83585pt.
 
 
-LaTeX Warning: Citation `bpmn' on page 15 undefined on input line 269.
+LaTeX Warning: Citation `bpmn' on page 15 undefined on input line 271.
 
 [15 <C:/Users/IB/Documents/dp/dp/images/faze_workflow.png>]
 
-LaTeX Warning: Citation `12' on page 16 undefined on input line 281.
+LaTeX Warning: Citation `12' on page 16 undefined on input line 283.
 
 <images/tokove_objekty.png, id=362, 164.11313pt x 58.71938pt>
 File: images/tokove_objekty.png Graphic file (type png)
 
 <use images/tokove_objekty.png>
-Package pdftex.def Info: images/tokove_objekty.png used on input line 294.
+Package pdftex.def Info: images/tokove_objekty.png used on input line 296.
 (pdftex.def)             Requested size: 210.78827pt x 75.42035pt.
  [16]
 <images/spojovaci_objekty.png, id=367, 157.33781pt x 63.23625pt>
 File: images/spojovaci_objekty.png Graphic file (type png)
 
 <use images/spojovaci_objekty.png>
-Package pdftex.def Info: images/spojovaci_objekty.png used on input line 310.
+Package pdftex.def Info: images/spojovaci_objekty.png used on input line 312.
 (pdftex.def)             Requested size: 210.78827pt x 84.72357pt.
 
 <images/bazen.png, id=368, 1080.28593pt x 315.42844pt>
 File: images/bazen.png Graphic file (type png)
  <use images/bazen.png>
-Package pdftex.def Info: images/bazen.png used on input line 325.
+Package pdftex.def Info: images/bazen.png used on input line 327.
 (pdftex.def)             Requested size: 341.27625pt x 99.64444pt.
 
 [17 <C:/Users/IB/Documents/dp/dp/images/tokove_objekty.png> <C:/Users/IB/Docume
@@ -689,7 +716,7 @@ nts/dp/dp/images/spojovaci_objekty.png>]
 File: images/artefakty.png Graphic file (type png)
 
 <use images/artefakty.png>
-Package pdftex.def Info: images/artefakty.png used on input line 340.
+Package pdftex.def Info: images/artefakty.png used on input line 342.
 (pdftex.def)             Requested size: 341.29079pt x 70.26645pt.
  [18 <C:/Users/IB/Documents/dp/dp/images/bazen.png> <C:/Users/IB/Documents/dp/d
 p/images/artefakty.png>]
@@ -698,7 +725,7 @@ Kapitola 4.
 File: images/activiti_modeler.png Graphic file (type png)
 
 <use images/activiti_modeler.png>
-Package pdftex.def Info: images/activiti_modeler.png used on input line 359.
+Package pdftex.def Info: images/activiti_modeler.png used on input line 361.
 (pdftex.def)             Requested size: 341.27625pt x 255.81279pt.
  [19
 
@@ -708,161 +735,191 @@ File: images/kaleo_designer_detail.png Graphic file (type png)
 
 <use images/kaleo_designer_detail.png>
 Package pdftex.def Info: images/kaleo_designer_detail.png used on input line 37
-1.
+3.
 (pdftex.def)             Requested size: 341.27625pt x 374.69316pt.
  [21 <C:/Users/IB/Documents/dp/dp/images/kaleo_designer_detail.png>]
 <images/kaleo_designer_popup.png, id=406, 144.54pt x 263.18324pt>
 File: images/kaleo_designer_popup.png Graphic file (type png)
 
 <use images/kaleo_designer_popup.png>
-Package pdftex.def Info: images/kaleo_designer_popup.png used on input line 380
+Package pdftex.def Info: images/kaleo_designer_popup.png used on input line 382
 .
 (pdftex.def)             Requested size: 240.91335pt x 401.5406pt.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+r'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 385.
+(hyperref)                removing `\textasciicaron' on input line 387.
 
 [22 <C:/Users/IB/Documents/dp/dp/images/kaleo_designer_popup.png>]
-Overfull \hbox (0.36435pt too wide) in paragraph at lines 391--392
-[]\T1/lmr/m/n/10.95 Základním po-ºa-dav-kem, ºe nový edi-tor bude pln¥ kom-pa-t
-i-bilní s work-
+Underfull \hbox (badness 1642) in paragraph at lines 395--395
+[]\T1/lmr/m/n/10.95 Editor umoºní ex-por-to-vat vý-
  []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--397
+[]\T1/lmr/m/n/10.95 Tento po-ºa-da-vek je ome-zen
+ []
+
+
+Underfull \hbox (badness 4779) in paragraph at lines 396--397
+\T1/lmr/m/n/10.95 vlast-nostmi work-flow sys-tému
+ []
+
+
+Underfull \hbox (badness 5260) in paragraph at lines 396--397
+\T1/lmr/m/n/10.95 Ka-leo, jenº umoº-¬uje vy-u-ºít
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 400--400
+\T1/lmr/m/n/10.95 t-ro-lo-vat správ-nost vy-tvá-°ené
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [23] [24]
 Kapitola 5.
-[25
 
-] <images/diagram_builder.png, id=430, 487.22025pt x 155.3805pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25
+
+]
+<images/diagram_builder.png, id=429, 487.22025pt x 155.3805pt>
 File: images/diagram_builder.png Graphic file (type png)
 
 <use images/diagram_builder.png>
-Package pdftex.def Info: images/diagram_builder.png used on input line 440.
+Package pdftex.def Info: images/diagram_builder.png used on input line 444.
 (pdftex.def)             Requested size: 341.27487pt x 100.3773pt.
- [26 <C:/Users/IB/Documents/dp/dp/images/diagram_builder.png>] [27]
+ [26 <C:/Users/IB/Documents/dp/dp/images/diagram_builder.png>]
+Underfull \vbox (badness 3189) has occurred while \output is active []
+
+ [27]
+[28]
 Kapitola 6.
 
 Package hyperref Warning: Composite letter `\textring+u'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textring' on input line 459.
+(hyperref)                removing `\textring' on input line 490.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 462.
+(hyperref)                removing `\textasciicaron' on input line 493.
 
-[28
+[29
 
 ]
 
 Package hyperref Warning: Composite letter `\textasciicaron+r'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 470.
+(hyperref)                removing `\textasciicaron' on input line 501.
 
 
 Package hyperref Warning: Composite letter `\textring+u'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textring' on input line 470.
+(hyperref)                removing `\textring' on input line 501.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+e'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 470.
+(hyperref)                removing `\textasciicaron' on input line 501.
 
 
 Package hyperref Warning: Composite letter `\textring+u'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textring' on input line 470.
+(hyperref)                removing `\textring' on input line 501.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+r'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 473.
+(hyperref)                removing `\textasciicaron' on input line 504.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 473.
+(hyperref)                removing `\textasciicaron' on input line 504.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+e'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 473.
-
-[29]
-
-Package hyperref Warning: Composite letter `\textring+u'
-(hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textring' on input line 488.
+(hyperref)                removing `\textasciicaron' on input line 504.
 
 [30]
-Kapitola 7.
-[31
 
-]
-
-Package hyperref Warning: Composite letter `\textasciicaron+e'
+Package hyperref Warning: Composite letter `\textring+u'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 496.
+(hyperref)                removing `\textring' on input line 519.
 
+[31]
+Kapitola 7.
 [32
 
 ]
-Underfull \hbox (badness 2573) in paragraph at lines 516--517
+
+Package hyperref Warning: Composite letter `\textasciicaron+e'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 527.
+
+[33
+
+]
+Underfull \hbox (badness 2573) in paragraph at lines 547--548
 []\T1/lmr/m/it/10.95 Liferay Por-tal 6.2 De-ve-lo-per's Gu-ide\T1/lmr/m/n/10.95
  , Li-fe-ray Inc., do-stupné na
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 516--517
+Underfull \hbox (badness 10000) in paragraph at lines 547--548
 []$\T1/lmtt/m/n/10.95 http : / / www . liferay . com / documentation / liferay-
 []portal / 6 . 2 /$
  []
 
 
-LaTeX Warning: Citation `bpmn' on page 33 undefined on input line 530.
+LaTeX Warning: Citation `bpmn' on page 34 undefined on input line 561.
 
-[33
+[34
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 547--549
+Underfull \hbox (badness 10000) in paragraph at lines 578--580
 []\T1/lmr/m/n/10.95 VIJAY, S. \T1/lmr/m/it/10.95 Web Tes-ting, Exam-ple Test ca
 -ses \T1/lmr/m/n/10.95 [on-line].,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 547--549
+Underfull \hbox (badness 10000) in paragraph at lines 578--580
 \T1/lmr/m/n/10.95 do-stupné na []$\T1/lmtt/m/n/10.95 http : / / www . softwaret
 estinghelp . com /$
  []
 
-[34]
+[35]
 P\v {r}\'{\i }loha A.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 558.
-[35
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 589.
+[36
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 558.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 589.
  (C:\Users\IB\Documents\dp\dp\DP.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 558.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 558.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 589.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 589.
 Package rerunfilecheck Info: File `DP.out' has not changed.
 (rerunfilecheck)             Checksum: 1DB417E60E860E77C1EAF64A57964674;3136.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 558.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 589.
  ) 
 Here is how much of TeX's memory you used:
- 6387 strings out of 493921
- 92410 string characters out of 3144885
- 173315 words of memory out of 3000000
- 9416 multiletter control sequences out of 15000+200000
+ 7993 strings out of 493921
+ 113509 string characters out of 3144885
+ 197322 words of memory out of 3000000
+ 10990 multiletter control sequences out of 15000+200000
  56333 words of font info for 41 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 30i,6n,31p,852b,434s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,9n,32p,886b,999s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc} <C:\Users\IB\AppData\Lo
 cal\MiKTeX\2.9\fonts\pk\ljfour\unknown\unknown\dpi514\fi-logo.pk><C:/Program Fi
@@ -876,9 +933,9 @@ Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/Program Files
 eX 2.9/fonts/type1/public/lm/lmro10.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
 lic/lm/lmtt10.pfb>
-Output written on DP.pdf (40 pages, 672745 bytes).
+Output written on DP.pdf (41 pages, 677937 bytes).
 PDF statistics:
- 628 PDF objects out of 1000 (max. 8388607)
- 125 named destinations out of 1000 (max. 500000)
+ 656 PDF objects out of 1000 (max. 8388607)
+ 145 named destinations out of 1000 (max. 500000)
  428 words of extra memory for PDF output out of 10000 (max. 10000000)
 

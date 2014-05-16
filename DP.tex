@@ -1,5 +1,6 @@
 \documentclass{fithesis}
 
+
 \usepackage{listings}
 \usepackage{lmodern}
 \usepackage[czech]{babel}
@@ -9,10 +10,58 @@
 \usepackage[T1]{fontenc} %formátuje české znaky - důležité
 \usepackage[plainpages=false, pdfpagelabels]{hyperref}
 \usepackage{hyperref}
+\usepackage{longtable}
 %\usepackage{makeidx}
 %\makeindex
 \def\figureautorefname{Obrázek}%
 \def\tableautorefname{Tabulka}%
+\def\lstlistingname{Ukázka kódu}%
+\def\sectionautorefname{Kapitola}%
+\usepackage{listings}
+\usepackage{color}
+ 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{1,1,1}
+ 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=none,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+\lstset{style=mystyle}
+
+
+
+\lstdefinelanguage{JavaScript} {
+	morekeywords={
+		break,const,continue,delete,do,while,export,for,in,function,
+		if,else,import,in,instanceOf,label,let,new,return,switch,this,
+		throw,try,catch,typeof,var,void,with,yield
+	},
+	sensitive=false,
+	morecomment=[l]{//},
+	morecomment=[s]{/*}{*/},
+	morestring=[b]",
+	morestring=[d]'
+}
+
+
 
 %\bibliographystyle{unsrt}
 
@@ -280,37 +329,31 @@ Poslední verze BPMN 2.0 byla vydána v lednu 2011 a klade si za cíl být jedin
 \item poskytnout xml schémata sloužící pro transformaci modelů.
 \end{itemize}
 
-Objekty jazyka BPMN jsou děleny do těchto základních kategorií. Tokové objekty, spojovací objekty, plavecké dráhy a artefakty. \cite{12}
+Objekty jazyka BPMN jsou děleny do těchto základních kategorií. Tokové objekty, spojovací objekty, plavecké dráhy a artefakty. \cite{bpmn} Workflow systém Kaleo umožnuje využít pouze tokové objekty a základní spojovací objekty.
 
 \subsection{Tokové objekty}
-Bývají označovány jako hlavní grafické prvky definující firemní procesy a dále se dělí.
+Bývají označovány jako hlavní grafické prvky definující firemní procesy a dále se dělí, viz \autoref{fig:tokove_objekty}.
 
 \begin{itemize}
-\item Události představují děje či události, ke kterým dochází v průběhu procesu.
-\item Aktivity vyjadřují činnosti, které se odehrávají uvnitř procesu. Ty se dále dělí úlohy a podprocesy.
-\item Brány jsou využívány pro zobrazení větvení a slučování toků a procesů, kdy je potřeba zohlednit různé podmínky. Dále jsou děleny na exkluzivní, inkluzivní a paralelní.
+\item Události představují děje či události, ke kterým dochází v průběhu procesu. Na zmíněném obrázky to jsou objekty: Start, Stav a Konec.
+\item Aktivity vyjadřují činnosti, které se odehrávají uvnitř procesu. Ty se dále dělí úlohy a podprocesy. Je to objekt: Úloha.
+\item Brány jsou využívány pro zobrazení větvení a slučování toků a procesů, kdy je potřeba zohlednit různé podmínky. Dále jsou děleny na exkluzivní, inkluzivní a paralelní. Jsou to objekty: Podmínka, Větvení a Spojení.
 \end{itemize}
 
 \begin{figure}[htp]
 \centering
-\includegraphics[width=210px]{images/tokove_objekty.png}
-\caption{Tokové objekty}
+\includegraphics[width=340px]{images/tokove_objekty.png}
+\caption{Tokové objekty používané v editoru}
+\label{fig:tokove_objekty}
 \end{figure}
 
-
 \subsection{Spojovací objekty}
-Spojové objekty slouží ke spojování tokových objektů. Dělí se na sekvenční tok, tok zpráv a asociaci.
-
-\begin{itemize}
-\item Sekvenční tok znázorňuje posloupnost procesních toků v bazénu nebo podprocesu. Zdrojem a cílem je vždy nějaký tokový objekt. 
-\item Tok zpráv označuje zprávy proudící přes hranice bazénů.
-\item Asociace se používá pro připojení artefaktů nebo textu k tokovým objektům.
-\end{itemize}
+Spojové objekty slouží ke spojování tokových objektů. Dělí se na sekvenční tok, tok zpráv a asociaci. Workflow systém Kaleo umožňuje využít pouze sekvenční tok, který znázorňuje posloupnoust procesních toků. Zdrojem a cílem je vždy nějaký tokový objekt.
 
 \begin{figure}[htp]
 \centering
-\includegraphics[width=210px]{images/spojovaci_objekty.png}
-\caption{Spojovací objekty}
+\includegraphics{images/spoj_objekty.png}
+\caption{Spojovací objekt používaný v editoru}
 \end{figure}
 
 
@@ -322,11 +365,6 @@ Plavecké dráhy, někdy nazývané kontexty, slouží k organizování a katego
 \item Dráhy jsou součástí bazénu a používají se ke kategorizaci činností v rámci bazénu.
 \end{itemize}
 
-\begin{figure}[htp]
-\centering
-\includegraphics[width=340px]{images/bazen.png}
-\caption{Bazén}
-\end{figure}
 
 \subsection{Artefakty}
 Artefakty umožňují přidávat další informace do modelu a tím rozšiřují dostupné elementy v BPMN. Tím mohou zvyšovat informační hodnotu modelu. Existují tyto artefakty: datové objekty, skupiny a anotace.
@@ -336,12 +374,6 @@ Artefakty umožňují přidávat další informace do modelu a tím rozšiřují
 \item Skupiny jsou využívány pro seskupení různých aktivit.
 \item Anotace dodávají modelu srozumitelnost a přehlednost.
 \end{itemize}
-
-\begin{figure}[htp]
-\centering
-\includegraphics[width=340px,height=70px]{images/artefakty.png}
-\caption{Artefakty}
-\end{figure}
 
 
 
@@ -385,34 +417,41 @@ Tento designer se také skládá ze tří základních panelů. V horním panelu
 \end{figure}
 
 \section{Požadavky na vytvářenou aplikaci}
-Grafický editor pro tvorbu je velice speciální aplikace a při analýze požadavků jsem zjistil, že tento produkt má pouze jeden diagram užití. Hlavně z tohoto důvodu jsem zvolil analýzu v podobě seznamu požadavků.Tento způsob zápisu je také bližší zákazníkům, kterým bude následně tento produkt nabízen. Seznam těchto požadavků je uveden zde: \autoref{tab:seznam_pozadavku}.
+Grafický editor pro tvorbu je velice speciální aplikace a při analýze požadavků jsem zjistil, že tento produkt má pouze jeden diagram užití. Hlavně z tohoto důvodu jsem zvolil analýzu v podobě seznamu požadavků.Tento způsob zápisu je také bližší zákazníkům, kterým bude následně tento produkt nabízen. 
 
-\begin{table}[h]
-\centering
-\begin{tabular}{|p{5.5cm}|p{5.5cm}|}
+\begin{center}
+\begin{longtable}{|p{5.5cm}|p{5.5cm}|}
+\caption{Seznam požadavků}\\
+\hline
+\textbf{Požadavek} & \textbf{Návrh řešení}  \\
+\hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Pokračování z předchozí strany}} \\
+\hline
+\textbf{Požadavek} & \textbf{Návrh řešení}  \\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\textit{Pokračování na další straně}} \\
+\endfoot
+\hline
+\endlastfoot
 \hline Kompatibilita s workflow systémem používaným v Liferay CE. & Výsledné XML schéma bude odpovídat požadovanému schématu workflow systémem Kaleo.  \\
-\hline Editor umožní vytvářet a vkládát nové workflow definice. Také úmožní načítat již vložené definice v portálu.  & Editor bude napojen portálové API Liferay portálu. \\
-\hline Editor umožní exportovat výsledné definice ve formátu XML.  & Bude možné exportovat vytvářené workflow definice do souboru ve formátu XML. \\
-\hline Editor bude pracovat v základní notaci BPMN.  & Tento požadavek je omezen vlastnostmi workflow systému Kaleo, jenž umožňuje využít pouze některé prvky. \\
-\hline  Editor bude v portálu přístupný pouze pro administrátory. & Editor bude umístěn v ovládacím panelu portálu v sekci konfigurace. \\
-\hline Editor umožní uživateli vracet zpět provedené úpravy.  & Editor bude podporovat funkcionalitu zpět / vpřed. \\
+\hline Aplikace umožní vytvářet a vkládát nové workflow definice. Také umožní načítat již vložené definice v portálu.  & Aplikace bude napojena skrz portálové API Liferay k portálu. \\
+\hline Aplikace umožní exportovat výsledné definice ve formátu XML.  & Bude možné exportovat vytvářené workflow definice do souboru ve formátu XML. \\
+\hline  Aplikace bude v portálu přístupný pouze pro administrátory. & Editor bude umístěn v ovládacím panelu portálu v sekci konfigurace. \\
+\hline Aplikace by být přehledná a jednoduše použitelná.  & Bude omezeno použití vyskakovacích oken, které aplikace tohoto typu znepřehledňují. \\
 \hline V editoru bude vytvářet i rozsáhlejší workflow definice.  & Editor bude umožňovat nastavit libovolnou velikost plátna. \\
 \hline Uživatel bude mít možnost zkontrolovat správnost vytvářené workflow definice.  &  Editor bude umožňovat validaci vytvářené workflow definice. \\
-\hline Aplikace by být přehledná a jednoduše použitelná.  & Bude omezeno použití vyskakovacích oken, které aplikace tohoto typu znepřehledňují. \\
+\hline Editor umožní uživateli vracet zpět provedené úpravy.  & Editor bude podporovat funkcionalitu zpět / vpřed. \\
+\hline Editor bude pracovat v základní notaci BPMN.  & Tento požadavek je omezen vlastnostmi workflow systému Kaleo, jenž umožňuje využít pouze některé prvky. \\
 \hline Editor bude umožňovat tvořit a upravovat skripty k akcím u jednotlivých elementů. & K těmto účelům bude k dispozici webový editor. \\
 \hline K tvorbě skriptů bude mít uživatel k dispozici předpřipravené některé nejpoužívanější funkce.  &   Bude k dispozici seznam seznam vložitelných funkcí v jednom zvoleném skriptovacím jazyku. \\
 \hline Výsledná aplikace by měla grafickým rozhraním zapadat do prostředí Liferay Portálu. & Pro tvorbu grafického rozhraní budou využity technologie, které jsou použity pro tvorbu grafického rozhraní portálu.\\
+\hline Kde to bude možné, bude ve formulářích dostupné automatické doplňování uživatelů z portálu. & Bude vytvořeno napojení na portálovou databázi uživatelů a rolí.
 
-\hline
-\end{tabular}
-\caption{Seznam požadavků}
-\label{tab:seznam_pozadavku}
-\end{table}
-
-
-
-
-
+\end{longtable}
+\end{center}
 
 
 
@@ -422,7 +461,7 @@ Aplikace není tvořena klasickou třívrstvou architekturou, protože není pot
 \section{Portletové MVC rámce}
 Ve druhé kapitole byl představen životní cyklus portletu a hlavní koncepty vývoje portletů v Javě. Při vývoji podle portletové specifikace se portlet vytváří rozšířením třídy  \verb|GenericPortlet| a pomocí action a render metod, které obsahují navigační a validační logiku a zároveň se starají o zpracování akcí a generování obsahu. S přibývajícím množstvím funkcí se pak tato třída stává nepřehlednou a špatně udržovatelnou. Tento problém je možné řešit tím, že se rozdělí zodpovědnosti za zpracování požadavků do více specificky zaměřených komponent pomocí některého portletového rámce.
 
-Portletové či webové rámce v sobě implementují osvědčené postupy a vzory pro zjednodušení vývoje. Pro vývoj portletů lze využít i ne přímo portletových rámců, například Struts nebo JSF, ale v takovémto případě je nutné použít takzvané portletové mosty, které řeší rozdíly mezi servletovým a portálovým životním cyklem. Toto řešení ale v sobě obsahuje vícefázový životní cyklus portletů a někdy to znesnadňuje využití plných možností portletové technologie. Portletový rámec navržený přímo pro vývoj portletů je rámec Spring MVC Portlet, který byl zvolen také pro vývoj této aplikace. Tento portletový rámec byl zejména proto, že je používaný ve firmě IBA CZ, pro kterou je tato práce řešena v rámci Sdružení průmyslových partnerů Fakulty informatiky.
+Portletové či webové rámce v sobě implementují osvědčené postupy a vzory pro zjednodušení vývoje. Pro vývoj portletů lze využít i ne přímo portletových rámců, například Struts nebo JSF, ale v takovémto případě je nutné použít takzvané portletové mosty, které řeší rozdíly mezi servletovým a portálovým životním cyklem. Toto řešení ale v sobě obsahuje vícefázový životní cyklus portletů a někdy to znesnadňuje využití plných možností portletové technologie. Portletový rámec navržený přímo pro vývoj portletů je rámec Spring MVC Portlet, který byl zvolen také pro vývoj této aplikace. Tento portletový rámec byl zvolen zejména proto, že je standardně používaný ve firmě IBA CZ, pro kterou je tato práce řešena v rámci Sdružení průmyslových partnerů Fakulty informatiky.
 
 \subsection{Spring Portlet MVC}
 Rámec Spring Portlet MVC je založen na stejných konceptech, třídách a rozhraní jako Spring Web MVC framework \cite{spring-web-mvc}. Spring Portlet MVC je navržen pouze pro vývoj portletů a je možné pomocí něj vyvíjet portlety, které splňují portletové standardy JSR-168 i JSR-286. Také implementuje klasickou architekturu MVC. Ta se skládá z následujících částí. \cite{mvc} 
@@ -446,41 +485,173 @@ Alloy je UI meta framework, který poskytuje konzistentní a jednoduché API pro
 \label{fig:diagram_builder}
 \end{figure}
 
-Pro tento framework jsem rozhodl z několika důvodů. Liferay Portal tento framework využívá pro tvorbu grafického rozhraní celého portálu a je proto již standardní součástí portálu, což jeho využití zjendnodušuje. Jeho použitím tedy dosáhnu stejného vzhledu jako je vzhled portálů, což je také jedním z požadavků kladených na tuto aplikaci. Dalším důvodem bylo, že Alloy UI poskytuje mnoho připravených komponent, které je možno využít. Z pohledu této práce je nejdůležitější komponentou Diagram Builder, viz. \autoref{fig:diagram_builder}. Pro potřeby aplikace byla tato komponenta rozšířena tak, aby ji bylo možné využít.
+Pro tento framework jsem rozhodl z několika důvodů. Liferay Portal tento framework využívá pro tvorbu grafického rozhraní celého portálu a je proto již standardní součástí portálu, což jeho využití zjendnodušuje. Jeho použitím tedy dosáhnu stejného vzhledu jako je vzhled portálů, což je také jedním z požadavků kladených na tuto aplikaci. Dalším důvodem bylo, že Alloy UI poskytuje mnoho připravených komponent, které je možno využít. 
 
+Z pohledu této práce je nejdůležitější komponentou \textbf{Diagram Builder} , viz. \autoref{fig:diagram_builder}. Pro potřeby aplikace byla tato komponenta rozšířena tak, aby ji bylo možné využít. \autoref{code:diagram_builder} obsahuje základní postup, jak se rozšiřují komponenty z Alloy UI frameworku.
 
- Následuje úkazka kódu, na kterém je vidět, jak se takové rozšíření komponenty z Allyou UI provádí.
-
-\begin{lstlisting}
+\begin{lstlisting}[language=JavaScript, caption = Rozšíření komponenty Diagram Builder , label = code:diagram_builder]
 AUI.add('my-diagram-builder', function(A, NAME) {
+   var MyDiagramBuilder = A.Component
+      .create({
+         NAME : DIAGRAM_NAME,
+         EXTENDS : A.DiagramBuilder,
 
-	var MyDiagramBuilder = A.Component
-		.create({
-			NAME : DIAGRAM_NAME,
-				
-			EXTENDS : A.DiagramBuilder,
-
-			prototype : {
-			}
-	});
-
-	A.MyDiagramBuilder = MyDiagramBuilder;
+          prototype : {
+             select : function(diagramNode) {
+             }
+          }
+   });
+   A.MyDiagramBuilder = MyDiagramBuilder;
 
 }, '2.0.0', {
 	requires : [ ],
 });
 
 \end{lstlisting}
+
+V části \verb|EXTENDS : A.DiagramBuilder| je definováno, jaká komponenta je rozšiřována. V bloku \verb|prototype| jsou umístěny přepisované či nově definované funkce. V části \verb|A.MyDiagramBuilder = MyDiagramBuilder| je nová komponenta přidána do frameworku Allyou UI a je možné ji možné používat. Vzhled komponenty je možné ovlivnit přepsáním daných třídy v css pravidlech. Komponenta po provedených úprávách viz. \autoref{fig:diagram_builder_uprav}.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=340px]{images/diagram_builder_uprav.png}
+\caption{Alloy UI Diagram Builder komponenta po úpravách}
+\label{fig:diagram_builder_uprav}
+\end{figure}
+
+Další zajímavou komponentou která je využita v aplikaci je \textbf{Ace editor}. Ta se využívá pro psaní vlastních skriptů pro jednotlivé akce přiřazované jednotlivým uzlům, či definování skriptu pro podmínky při tvorbě definice workflow. Pro psaní těchto skriptů je možné využít různé skriptovací jazyky. Tuto komponentu k těmto účelům nebylo nutné nijak rozšiřovat. Je však využito možnosti nastavit tzv. mód editoru v závislosti na zvoleném skriptovacím jazyku, což pak zajišťuje barevné zvýraznění syntaxe daného jazyka. Dále byla ještě přidána při tvorbě skriptů možnost vkládat některé definové často používané funkce. Pro účely aplikace bylo vytvořeno několik funkcí v jazyku Groovy. Uživatel má také možnost přidávat své vlastní funkce. Na souborovém disku vytvoří adresář se jménem "scripts" a v něm další adresář se názvem podle scriptovacího jazyka, u kterého mají být funkce zobrazovány. Do tohoto adresáře jsou pak vkládány scripty s funkcemi. Cestu k tomuto adresáři pak musí zadefinovat v konfiguračním souboru portálu Liferay \verb|portal-ext.properties| takto: 
+
+\verb|cz.muni.fi.mtlacbaba.designer.scripts="cesta k adresáři" |
+
+Pak jsou také tyto funkce načteny a k dispozici při tvorbě workflow definic. Výsledný vzhled editoru na úpravu skriptů je vidět viz. \autoref{fig:ace_editor}.
  
+\begin{figure}[htp]
+\centering
+\includegraphics[width=340px]{images/ace_editor.png}
+\caption{Ace editor použitý v aplikaci}
+\label{fig:ace_editor}
+\end{figure}
+
+Pro validaci formulářů byla využita další dostupná komponenta, Form Validator. Je použita pro veškeré validace vstupů od uživatele ve všech formulářích.
+
+\begin{lstlisting}[language=JavaScript , caption = Použítí komponenty Form Validator , label = code:validator]
+var actionValidator = new A.FormValidator({
+   boundingBox: '#action-form', 
+   rules: {
+      name: {required: true},
+      priority: {digits:true}
+   }
+});
+\end{lstlisting}
+
+\autoref{code:validator} ilustruje použití komponenty. V ní \verb|rules| představuje pole omenzení pro jednotlivé pole formuláře pro zadání nové akce. Pole \verb|name| je povinné a pole \verb|priority| může obsahovat pouze číslice. Validator je uložen do proměnné \verb|actionValidator| a navázán na formulář s id \verb|action-form|. Použití v aplikaci viz. \autoref{fig:validator}.
+
+\begin{figure}[htp]
+\centering
+\includegraphics{images/validator.png}
+\caption{Form Validator}
+\label{fig:validator}
+\end{figure}
+
+Další použitou komponentu  je Autocomplete. \autoref{code:autocomplete} ukazuje použití této komponenty. V proměnné \verb|data| jsou data použitá pro našeptávání, která jsou posílány ze serverové části aplikace a tam jsou získáváná pomocí portálového API. Blíže bude vysvětleno zde: \autoref{sec:portal_api}. V části \verb|resultHighlighter: 'phraseMatch'| se nastavují pravidla pro zvýrazňování fráze při výběru, v tomto případě se zvýrazňuje celá fráze. V části \verb|resultFilters: 'charMatch'| se  nastavují pravidla pro vyhledávání v nápovědě. Zde je nastaveno  vyhledávání podle zadaných znaků, které slova obsahují i v různém pořadí. Použití v aplikace viz. \autoref{fig:autocomplete}.
+
+\begin{lstlisting}[language=JavaScript, float =h , caption = Použítí komponenty autocomplete , label = code:autocomplete ]
+var data = ["default@liferay.com-10161", 
+                  "test@liferay.com-test"]
+
+A.one('#role').plug(A.Plugin.AutoComplete, {
+	resultHighlighter: 'phraseMatch', 
+     resultFilters: 'charMatch',
+	source: data
+});
+\end{lstlisting}
+
+
+
+\begin{figure}[htp]
+\centering
+\includegraphics{images/autocomplete.png}
+\caption{Autocomplete}
+\label{fig:autocomplete}
+\end{figure}
+
 
 \section{JAXB}
-Pro práci s daty ve formátu XML je využit nástroj JAXB (Java Architecture for XML Binding). Tento nástroj nabízí metody pro konverzi XML dat na Java objekt a naopak. Umožňuje také zápis a čtení XML z mnoho různých zdrojů.
+K ukládání worfklow definice je využíván dokument ve formátu XML a struktura XML dokumentu používaného workflow systémem Kaleo je definovaná XML schématem, označovaném jako XML Schema Definition (XSD). Je to XML dokument s pevnou strukturou obsahující omezujicí podmínky na strukturu a obsah XML dokumentu. Proto je možné využít klasické nástroje pro práci s XML a jedno z možných využití je generování anotovaných Java tříd popisující XML dokumenty vyhovující danému XML schématu. 
 
-Aby mohly být objekty určité třídy transformovány do XML dokumentů, tak musí obsahovat potřebné anotace. K základnímu vygenerování tříd podle XML schématu jsme využil kompilátor schémat, který je součástí JDK. Pak bylo ještě nutné upravit třídy.
+K tomuto účelu jsem zvolil nástroj JAXB, jenž umožňuje tvořit návaznosti mezi Java objekty a XML schématem, díky nimž je pak možno zpracovávat XML dokumenty. Tento nástroj je založený na anotacích a poskytuje rozhraní pro serializaci a deserializaci Java objektů do/z XML dokumentů podle daných anotací. Navíc také poskytuje vyšší úroveň abstrakce než SAX \footnote{SAX je zkratka pro Simple API for XML} či DOM \footnote{DOM je zkratka pro Document Object Model} a je součástí JDK.
+
+Pro vygenerování sady tříd jazyka Java na základě daného schématu jsem využil kompilátor vazeb (xjc), jenž je také součástí JDK. Takto byly anotované třídy sloužící pro konvertování XML dokumentů do stromů objektů a zpět. Ukázka takto anotované třídy \autoref{code:jaxb}.
+
+\begin{lstlisting}[language=Java, float =h , caption = Java třída s JAXB anotacemi , label = code:jaxb ]
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "abstract-workflow-node-complex-type", 
+propOrder = {
+    "name",
+    "description",
+    "metadata"
+})
+@XmlSeeAlso({
+    Task.class,
+    ActionTimerWorkflowNodeComplexType.class
+})
+public abstract class AbstractWorkflowNodeComplexType{
+
+    @XmlElement(required = true)
+    protected String name;
+    protected String description;
+    protected String metadata;
+//upraveno
+}
+
+\end{lstlisting}
+
+Z taktov vytvořených tříd je vytvořen strom objektů, který reprezentuje obsah a strukturu XML dokumentu. Pomocí těchto tříd je možné upravavot reprezentaci dokumentu a nakonec je tento strom opět převeden na XML dokument. S tímto je spojena první fáze validace workflow definice, jelikož se tímto kontroluje, zda odpovídá zadanému schématu. Tímto je pouze zaručené, že workflow definice obsahuje validní objekty, ale ještě není zaručeno, že workflow je validní jako celek. Úplná validace se provádí skrze portálové API.
 
 
-\section{Portálové API}
-Z portálového API jsou použity třídy \verb|WorkflowDefinitionManagerUtil| pro načítání, validaci a vkládání workflow definicí přímo do portálu. Dál jsou také využity entitní služby pro uživatele (\verb|UserLocalServiceUtil|) a role (\verb|RoleLocalServiceUtil|) v portálu, které slouží pro automatické doplňování ve formulářích.
+
+\section{Liferay Portal API} 
+\label{sec:portal_api}
+Liferay Portal API\footnote{Zkratka pro Application Programing Interaface označuje rozhraní pro programování aplikací.} poskytuje vývojářům přístup ke zdrojům v portálu. Mezi tyto zdroje například patří uživatelé, role, články, dokumenty, workflow a další. S těmito zdroji je možné pracovat skrze servisní třídy poskytující metody pro manipulaci s nimi.
+
+V některých formulářích bylo implementováno našeptání uživatelů, rolí a workflow definicí existujících v portálu. K tomu účelu byly využity následující statické servisní třídy: 
+\begin{itemize}
+\item pro uživatele  (\verb|UserLocalServiceUtil|),
+\item pro role (\verb|RoleLocalServiceUtil|),
+\item a pro workflow definice (\verb|KaleoDefinitionLocalServiceUtil|).
+\end{itemize}
+\autoref{code:users} ilustruje načtení všech existujících workflow definic v portálu.
+
+\begin{lstlisting}[language=Java, float =h , caption = Načtení workflow definic z portálu , label = code:users ]
+ List<KaleoDefinition> definitions = 
+	KaleoDefinitionLocalServiceUtil
+	.getKaleoDefinitions(-1, -1);
+}
+\end{lstlisting}
+
+Pro vložení a validaci definice byla využita třída \verb|WorkflowDefinitionManagerUtil|. 
+
+\begin{lstlisting}[language=Java, float =h , caption = Validace workflow pomocí portálového API , label = code:workflow ]
+try {
+WorkflowDefinitionManagerUtil.
+validateWorkflowDefinition(xml.getBytes("utf-8"));
+        } catch (WorkflowException e) {
+        //zpracovani vyjimky
+        }
+}
+\end{lstlisting}
+\autoref{code:workflow} ukazuje proces validace workflow. Proces validace v tomto případě probíhá následovně. Vytvořené workflow se validuje pomocí metody \verb|validateWorkflowDefinition|. Pokud je workflow validní, tak metoda úspěšně skončí, pokud ovšem workflow validní není, tak je vyhozena vyjímka, která obsahuje důvod selhání validaci. Tato vyjímka je aplikací zachycena a důvod selhání je vrácen uživateli v podobě chybové hlášky, 
+\autoref{fig:error}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=340px]{images/error_message.png}
+\caption{Chybová hláška při validaci worklow}
+\label{fig:error}
+\end{figure}
+
+
+
+
 
 \chapter{Testování aplikace}
 Testováním je možné nazvat jakoukoliv aktivitu, která odhalí, že chování programu porušuje specifikaci. Nejčastěji bývá na testování nahlíženo jako na disciplínu, jejímž úkolem je ověřování kvality. Příkladem může být definice od Kanera \cite{kaner}: Softwarové testování je empirický technický výzkum kvality testovaného produktu nebo služby, prováděný za účelem poskytnutí těchto informací lidem, kterí mají zájem na dané věci. Na pojem kvalita produktu v tomto případě může být nahlíženo tak, že produkt má splnit požadavky určité potřeby, která stojí za jeho vznikem. Tedy kvalitní software je takový, který tyto potřeby uspokojuje.
@@ -558,7 +729,7 @@ SARIN, Ashish. \textit{Portlets in action}, Shelter Island, NY: Manning, 2011.
 \bibitem{workflow}
 CARDA, A., KUNSTOVÁ, R. \textit {Workflow : Nástroj manažera pro řízení podnikových procesů}. 2. vyd. Praha: Grada Publishing, 2003.
 
-\cite{bpmn}
+\bibitem{bpmn}
 \textit{Business Process Model and Notation (BPMN)}, Object Management Group, Inc., dostupné na \url{http://www.omg.org/spec/BPMN/2.0/} [cit. 2014-04-23]
 
 \bibitem{spring-web-mvc}

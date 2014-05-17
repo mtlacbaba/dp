@@ -82,19 +82,22 @@
 \ThesisTitlePage
 
 \begin{ThesisDeclaration}
-Prohlášení\AdvisorName
+Prohlašuji, že tato práce je mým původním autorským dílem, které jsem
+vypracoval samostatně. Všechny zdroje, prameny a literaturu, které jsem při
+vypracování používal nebo z nich čerpal, v práci řádně cituji s uvedením
+úplného odkazu na příslušný zdroj.\AdvisorName
 \end{ThesisDeclaration}
 
 \begin{ThesisThanks}
-Poděkování
+Na tomto místě bych chtěl poděkovat vedoucímu práce RNDr. Jaroslavu Ráčkovi, Ph.D. a vývojářům ze společnosti IBA CZ za konzultace a informace při vytváření této práce. Také bych rád poděkoval své rodině a blízkým za zázemí, které mi během práce poskytli.
 \end{ThesisThanks}
 
 \begin{ThesisAbstract}
-Shrnutí
+Cílem práce je seznámit se s problematikou podnikových portálů a s tvorbou portletů. Praktickým výstupem práce je implementace grafického workflow editoru pro tvorbu workflow v Liferay Portal verze CE. Práce se nejprve věnuje obecně podnikovým portálům a vývoji portletů. Následuje část věnující se workflow systémům a notaci BPMN. Pak následuje srovnání podobných řešení pro jiné systémy a jsou vyspecifikovány požadavky na novou aplikaci. Je popsána architektura aplikace a technologie použité při realizaci. Pozornost je věnována především rámci Spring, frameworku Alloy UI, nástroji JAXB a portálovému API. Dále je popsáno provedené testování aplikace a uživatelská dokumentace.
 \end{ThesisAbstract}
 
 \begin{ThesisKeyWords}
-Klíčová slova
+podnikový portál, portlet, Java, JSR-186, JSR-286, Liferay CE, workflow, BPMN, Spring MVC, Alloy UI, JAXB
 \end{ThesisKeyWords}
 
 
@@ -616,19 +619,16 @@ Liferay Portal API\footnote{Zkratka pro Application Programing Interaface označ
 V některých formulářích bylo implementováno našeptání uživatelů, rolí a workflow definicí existujících v portálu. K tomu účelu byly využity následující statické servisní třídy: 
 \begin{itemize}
 \item pro uživatele  (\verb|UserLocalServiceUtil|),
-\item pro role (\verb|RoleLocalServiceUtil|),
-\item a pro workflow definice (\verb|KaleoDefinitionLocalServiceUtil|).
+\item pro role (\verb|RoleLocalServiceUtil|).
 \end{itemize}
-\autoref{code:users} ilustruje načtení všech existujících workflow definic v portálu.
+\autoref{code:users} ilustruje načtení všech existujících uživatelů v portálu.
 
-\begin{lstlisting}[language=Java, float =h , caption = Načtení workflow definic z portálu , label = code:users ]
- List<KaleoDefinition> definitions = 
-	KaleoDefinitionLocalServiceUtil
-	.getKaleoDefinitions(-1, -1);
-}
+\begin{lstlisting}[language=Java, float =h , caption = Načtení uživatelů z portálu , label = code:users ]
+List<User> users = UserLocalServiceUtil.getUsers(-1, -1));
 \end{lstlisting}
 
-Pro vložení a validaci definice byla využita třída \verb|WorkflowDefinitionManagerUtil|. 
+Třída \verb|WorkflowDefinitionManagerUtil| byla využita pro načítání, vkládání a validaci workflow definic. \autoref{code:workflow} ukazuje proces validace workflow. Proces validace v tomto případě probíhá následovně. Vytvořené workflow se validuje pomocí metody \verb|validateWorkflowDefinition|. Pokud je workflow validní, tak metoda úspěšně skončí, pokud ovšem workflow validní není, tak je vyhozena vyjímka, která obsahuje důvod selhání validaci. Tato vyjímka je aplikací zachycena a důvod selhání je vrácen uživateli v podobě chybové hlášky, 
+\autoref{fig:error}
 
 \begin{lstlisting}[language=Java, float =h , caption = Validace workflow pomocí portálového API , label = code:workflow ]
 try {
@@ -639,8 +639,7 @@ validateWorkflowDefinition(xml.getBytes("utf-8"));
         }
 }
 \end{lstlisting}
-\autoref{code:workflow} ukazuje proces validace workflow. Proces validace v tomto případě probíhá následovně. Vytvořené workflow se validuje pomocí metody \verb|validateWorkflowDefinition|. Pokud je workflow validní, tak metoda úspěšně skončí, pokud ovšem workflow validní není, tak je vyhozena vyjímka, která obsahuje důvod selhání validaci. Tato vyjímka je aplikací zachycena a důvod selhání je vrácen uživateli v podobě chybové hlášky, 
-\autoref{fig:error}
+
 
 \begin{figure}[htp]
 \centering
@@ -670,10 +669,29 @@ Zde je možné zahrnout kontrolu správnosti odkazování, ověřování funkčn
 Protože existují různé platformy spolu s rozmanitými prohlížeči, kde mohou být webové aplikace spouštěny, je testování kompatability velmi důležité. Je tedy vždy vhodné otestovat aplikaci na nejběžnějších kombinacích systémů, aby se tak zajistila správná funkčnost aplikace pro co nejširší okruh uživatelů.
 
 \section{Příprava a průběh testů}
-Aplikace workflow editor je určena pro tvorbu workflow definic v portálu Liferay. Jejím jediným uživatelem je administrátor portálu.Testování probíhalo podle předem určených určených testových scénářů na různých prostředí a v různých webových prohlížečích. Testové scénáře pokrývají všechny důležité funkce editoru a jsou to: vytvoření nového workflow, změna vloženého workflow, exportování workflow do souboru xml, přidání nového uzlu, přidání akce k uzlu, úprava akce u uzlu, přidání oznámení k uzlu, úprava oznámení u akce, u podmínky úprava scriptu, u úlohy úprava přiřazení, přidání časovače u uzlu, úprava časovače u uzlu. Níže jsou podrobně rozepsány scénaře na změnu workflow a úpravu akce u uzlu.
+Aplikace workflow editor je určena pro tvorbu workflow definic v portálu Liferay. Jejím jediným uživatelem je administrátor portálu.Testování probíhalo podle předem určených určených testových scénářů na různých prostředí a v různých webových prohlížečích. Testové scénáře (TS) pokrývají všechny důležité funkce editoru. 
+\begin{itemize}
+\item TS-01 Vytvoření nového workflow.
+\item TS-02 Změna již vloženého workflow.
+\item TS-03 Exportování workflow do dokumentu ve formátu XML.
+\item TS-04 Přidání nového uzlu.
+\item TS-05 Přidání akce k uzlu.
+\item TS-06 Úprava akce u uzlu.
+\item TS-07 Přidání oznámení k uzlu.
+\item TS-08 Úprava oznámení u akce.
+\item TS-09 U uzlu typu podmínka úprava scriptu.
+\item TS-10 U uzlu typu úloha úprava přiřazení.
+\item TS-11 Přidání časovače u uzlu.
+\item TS-12 Úprava časovače u uzlu.
+\item TS-13 Validace workflow.
+\end{itemize}
+Následuje úkazka vybraného testového scénaře.
 
-\subsection{Ukázkový testový scénář č.1 - Změna vloženého workflow}
-\textbf{Vstupní podmínky:} Uživatel je v roli Administrátora (má tedy přístup k do kontrolního panelu), je přihlášený v portálu a v sekci kontrolní panel. Uživatel již vytvořil workflow a vložil ho do portálu na základě Vytvoření nového workflow.
+\begin{table}[htp]
+\textbf{Testový scénář - TS-02 Změna již vloženého workflow}
+ 
+
+\textbf{Vstupní podmínky:} Uživatel je v roli Administrátora (má tedy přístup k do kontrolního panelu), je přihlášený v portálu a nachází se v sekci kontrolní panel. Uživatel již vytvořil workflow a vložil ho do portálu na základě Vytvoření nového workflow.
 
 \textbf{Scénář:}
 \begin{enumerate}
@@ -684,15 +702,72 @@ Aplikace workflow editor je určena pro tvorbu workflow definic v portálu Lifer
 \item Kliknutím na nově vytvořený stav 
 \item Pak táhnutím nad cílový stav a kliknutím na něj se vytvoří nová vazba
 \item Kliknutí na tlačítko "Uložit" pro uložení pozměněného workflow
-\end{enumerate}
 
+\end{enumerate}
+\end{table}
 
 \section{Vyhodnocení testů}
-Testy byly provedeny na různých prostředích a v různých prohlížečích. Bylo během nich nalezeno několik drobných chyb, které byly opraveny a odstranění chyb bylo znovu následně ověřeno.
+Testové scénáře byly prováděny průběžně ihned po implementaci jednotlivých části na prostředí Windows 7 a v prohlížeči Firefox. Problémy v nich nalezené byly ihned opravovány a nebyly nijak dokumentovány.
+
+Po dokončení celé aplikace jsem přistoupil k provedení všech testových scénářů v prostředí s  operačním systémem Windows 7 (W7) a zde jsem zvolil prohlížeče Internet Explorer (IE) ve verzích 9,11 a prohlížeče Google Chrome (Chrome) ve verzi 34 a Firefox (FF) ve verzi 29. Jako druhé testovací prostředí jsem zvolil linuxovou distribuci Ubuntu 14.04 LTS a zde byly zvoleny prohlížeče Google Chrome ve verzi 34 a Firefox ve verzi 28.
+
+Bylo tedy prováděno 12 testových scénářů na celkem na 6 různých prostředí. V tabulce  \ref{tab:chyby} jsou uvedeny všechny nalezené chyby při provádění scénářů. V první sloupci je scénář a prostředí, pokud se chyba vyskytla pouze ve specifickém prostředí a v druhém sloupci je popis chyby.
+
+\begin{center}
+\begin{longtable}{|p{3cm}|p{8cm}|}
+\caption{Vyhodnocení testových scénářů}
+\label{tab:chyby}\\
+
+\hline
+\textbf{Scénář} & \textbf{Nalezené chyby}  \\
+\hline
+\endfirsthead
+\multicolumn{2}{c}%
+{\tablename\ \thetable\ -- \textit{Pokračování z předchozí strany}} \\
+\hline
+\textbf{Scénář} & \textbf{Nalezené chyby}  \\
+\hline
+\endhead
+\hline \multicolumn{2}{r}{\textit{Pokračování na další straně}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline TS-01 W7 - IE & Šedý čtvereček nad výběrem elementům je chybně navíc.\\
+\hline TS-03 & Je možné exportovat i nevalidní workflow definici.\\
+\hline TS-05 & Vypsání chybování hlášky pohne zbytkem formuláře směrem dolů. Týká se všech formulářů v aplikaci.\\
+\hline TS-05 & Validator se neresetuje po zrušení formuláře. Týká se všech formulářů v aplikaci.\\
+\hline TS-13 & Zobrazení chybové hlášky posune celou aplikaci dolů, po zmizení hlášky se opět celá aplikace posune zpět.\\
+
+\end{longtable}
+\end{center}
+
+Nalezené chyby byly opraveny a zopakování testových scénářů ověřilo odstranění chyb.
 
 \chapter{Dokumentace}
+V této kapitole bude popsána vytvořená uživatelská dokumentace pro aplikaci Workflow Editor. Celá dokumentace je vytvořena v systému confluence firmy IBA CZ a není dostupná pouze z podnikové sítě. Z toho důvodu je popsána pouze struktura této dokumentace.
 
+\begin{itemize}
+\item Úvod a základní popis aplikace
+\item Vytvoření a či načtení existujícího workflow
+\item Úpravení záklaldní vlastností workflow
+\item Vytvoření nového uzlu ve workflow a úpravy základních vlastností
+\item Vytvoření a úpravy vazby mezi uzly
+\item Vytvoření a úpravy akce u zvoleného uzlu
+\item Vytvoření a úpravy oznámení u zvoleného uzlu
+\item Vytvoření a úpravy přiřazení u uzlu typu úloha
+\item Vytvoření a úpravy skriptu u uzlu typu podmínka
+\item Vytvoření a úpravy časovače u uzlu
+\item Validace, uložení a export workflow
+\end{itemize}
 
+Pro ukázku z dokumentace jsem zvolil část Úvod a základní popis aplikace a je to obrázek \ref{fig:dokumentace}.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=340px]{images/error_message.png}
+\caption{Chybová hláška při validaci worklow}
+\label{fig:dokumentace}
+\end{figure}
 
 \chapter*{Závěr}
 \addcontentsline{toc}{chapter}{Závěr}

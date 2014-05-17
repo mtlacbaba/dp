@@ -38,8 +38,7 @@
 \contentsline {subsection}{\numberline {6.1.1}\rmfamily Funk\IeC {\v c}n\IeC {\'\i } testov\IeC {\'a}n\IeC {\'\i }}{33}{subsection.6.1.1}
 \contentsline {subsection}{\numberline {6.1.2}\rmfamily Testov\IeC {\'a}n\IeC {\'\i } kompatability}{34}{subsection.6.1.2}
 \contentsline {section}{\numberline {6.2}\slshape P\IeC {\v r}\IeC {\'\i }prava a pr\IeC {\r u}b\IeC {\v e}h test\IeC {\r u}}{34}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}\rmfamily Uk\IeC {\'a}zkov\IeC {\'y} testov\IeC {\'y} sc\IeC {\'e}n\IeC {\'a}\IeC {\v r} \IeC {\v c}.1 - Zm\IeC {\v e}na vlo\IeC {\v z}en\IeC {\'e}ho workflow}{34}{subsection.6.2.1}
 \contentsline {section}{\numberline {6.3}\slshape Vyhodnocen\IeC {\'\i } test\IeC {\r u}}{35}{section.6.3}
-\contentsline {chapter}{\numberline {7}\bfseries Dokumentace}{36}{chapter.7}
-\contentsline {chapter}{Z\IeC {\'a}v\IeC {\v e}r}{37}{chapter*.7}
-\contentsline {chapter}{\numberline {A}\bfseries Polo\IeC {\v z}ky seznamu}{40}{appendix.A}
+\contentsline {chapter}{\numberline {7}\bfseries Dokumentace}{37}{chapter.7}
+\contentsline {chapter}{Z\IeC {\'a}v\IeC {\v e}r}{39}{chapter*.7}
+\contentsline {chapter}{\numberline {A}\bfseries Polo\IeC {\v z}ky seznamu}{42}{appendix.A}

@@ -1,43 +1,27 @@
-\BOOKMARK [0][-]{chapter*.6}{\332vod}{}% 1
-\BOOKMARK [0][-]{chapter.1}{Podnikov\351 port\341ly}{}% 2
-\BOOKMARK [1][-]{section.1.1}{ Konkr\351tn\355 port\341lov\341 re\235en\355}{chapter.1}% 3
-\BOOKMARK [1][-]{section.1.2}{ Liferay Portal}{chapter.1}% 4
-\BOOKMARK [0][-]{chapter.2}{V\375voj portletu}{}% 5
-\BOOKMARK [1][-]{section.2.1}{ Portlet}{chapter.2}% 6
-\BOOKMARK [1][-]{section.2.2}{ Specifikace}{chapter.2}% 7
-\BOOKMARK [2][-]{subsection.2.2.1}{ \231ivotn\355 cyklus portletu}{section.2.2}% 8
-\BOOKMARK [2][-]{subsection.2.2.2}{ Re\236imy portletu}{section.2.2}% 9
-\BOOKMARK [2][-]{subsection.2.2.3}{ Stavy okna}{section.2.2}% 10
-\BOOKMARK [2][-]{subsection.2.2.4}{ Struktura port\341lov\351 aplikace}{section.2.2}% 11
-\BOOKMARK [0][-]{chapter.3}{Workflow}{}% 12
-\BOOKMARK [1][-]{section.3.1}{ Typy workflow syst\351mu}{chapter.3}% 13
-\BOOKMARK [2][-]{subsection.3.1.1}{ Hledisko charakteru procesu}{section.3.1}% 14
-\BOOKMARK [2][-]{subsection.3.1.2}{ Hledisko orientace procesu}{section.3.1}% 15
-\BOOKMARK [2][-]{subsection.3.1.3}{ Hledisko technologick\351 infrastruktury}{section.3.1}% 16
-\BOOKMARK [1][-]{section.3.2}{ Obecn\375 model workflow syst\351mu}{chapter.3}% 17
-\BOOKMARK [2][-]{subsection.3.2.1}{ F\341ze workflow}{section.3.2}% 18
-\BOOKMARK [1][-]{section.3.3}{ Workflow pro procesy pracuj\355c\355 s vnitropodnikov\375mi dokumenty}{chapter.3}% 19
-\BOOKMARK [1][-]{section.3.4}{ BPMN}{chapter.3}% 20
-\BOOKMARK [2][-]{subsection.3.4.1}{ Tokov\351 objekty}{section.3.4}% 21
-\BOOKMARK [2][-]{subsection.3.4.2}{ Spojovac\355 objekty}{section.3.4}% 22
-\BOOKMARK [2][-]{subsection.3.4.3}{ Plaveck\351 dr\341hy}{section.3.4}% 23
-\BOOKMARK [2][-]{subsection.3.4.4}{ Artefakty}{section.3.4}% 24
-\BOOKMARK [0][-]{chapter.4}{Anal\375za a n\341vrh aplikace}{}% 25
-\BOOKMARK [1][-]{section.4.1}{ Activiti workflow}{chapter.4}% 26
-\BOOKMARK [1][-]{section.4.2}{ Kaleo designer}{chapter.4}% 27
-\BOOKMARK [1][-]{section.4.3}{ Po\236adavky na vytv\341renou aplikaci}{chapter.4}% 28
-\BOOKMARK [0][-]{chapter.5}{Realizace}{}% 29
-\BOOKMARK [1][-]{section.5.1}{ Portletov\351 MVC r\341mce}{chapter.5}% 30
-\BOOKMARK [2][-]{subsection.5.1.1}{ Spring Portlet MVC}{section.5.1}% 31
-\BOOKMARK [1][-]{section.5.2}{ Alloy UI framework}{chapter.5}% 32
-\BOOKMARK [1][-]{section.5.3}{ JAXB}{chapter.5}% 33
-\BOOKMARK [1][-]{section.5.4}{ Liferay Portal API}{chapter.5}% 34
-\BOOKMARK [0][-]{chapter.6}{Testov\341n\355 aplikace}{}% 35
-\BOOKMARK [1][-]{section.6.1}{ Zvolen\351 druhy testu}{chapter.6}% 36
-\BOOKMARK [2][-]{subsection.6.1.1}{ Funkcn\355 testov\341n\355}{section.6.1}% 37
-\BOOKMARK [2][-]{subsection.6.1.2}{ Testov\341n\355 kompatability}{section.6.1}% 38
-\BOOKMARK [1][-]{section.6.2}{ Pr\355prava a prubeh testu}{chapter.6}% 39
-\BOOKMARK [1][-]{section.6.3}{ Vyhodnocen\355 testu}{chapter.6}% 40
-\BOOKMARK [0][-]{chapter.7}{Dokumentace}{}% 41
-\BOOKMARK [0][-]{chapter*.7}{Z\341ver}{}% 42
-\BOOKMARK [0][-]{appendix.A}{Polo\236ky seznamu}{}% 43
+\BOOKMARK [0][-]{chapter.1}{\332vod}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Podnikov\351 port\341ly}{}% 2
+\BOOKMARK [1][-]{section.2.1}{ Konkr\351tn\355 port\341lov\341 re\235en\355}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{ Liferay Portal}{chapter.2}% 4
+\BOOKMARK [0][-]{chapter.3}{V\375voj portletu}{}% 5
+\BOOKMARK [1][-]{section.3.1}{ Portlet}{chapter.3}% 6
+\BOOKMARK [1][-]{section.3.2}{ Portletov\341 specifikace}{chapter.3}% 7
+\BOOKMARK [0][-]{chapter.4}{Workflow}{}% 8
+\BOOKMARK [1][-]{section.4.1}{ Typy workflow syst\351mu}{chapter.4}% 9
+\BOOKMARK [1][-]{section.4.2}{ Obecn\375 model workflow syst\351mu}{chapter.4}% 10
+\BOOKMARK [1][-]{section.4.3}{ Workflow pro procesy pracuj\355c\355 s vnitropodnikov\375mi dokumenty}{chapter.4}% 11
+\BOOKMARK [1][-]{section.4.4}{ BPMN}{chapter.4}% 12
+\BOOKMARK [0][-]{chapter.5}{Anal\375za a n\341vrh aplikace}{}% 13
+\BOOKMARK [1][-]{section.5.1}{ Activiti workflow}{chapter.5}% 14
+\BOOKMARK [1][-]{section.5.2}{ Kaleo designer}{chapter.5}% 15
+\BOOKMARK [1][-]{section.5.3}{ Po\236adavky na vytv\341renou aplikaci}{chapter.5}% 16
+\BOOKMARK [0][-]{chapter.6}{Realizace}{}% 17
+\BOOKMARK [1][-]{section.6.1}{ Portletov\351 MVC r\341mce}{chapter.6}% 18
+\BOOKMARK [1][-]{section.6.2}{ Alloy UI framework}{chapter.6}% 19
+\BOOKMARK [1][-]{section.6.3}{ JAXB}{chapter.6}% 20
+\BOOKMARK [1][-]{section.6.4}{ Liferay Portal API}{chapter.6}% 21
+\BOOKMARK [0][-]{chapter.7}{Testov\341n\355 aplikace}{}% 22
+\BOOKMARK [1][-]{section.7.1}{ Zvolen\351 druhy testu}{chapter.7}% 23
+\BOOKMARK [1][-]{section.7.2}{ Pr\355prava a prubeh testu}{chapter.7}% 24
+\BOOKMARK [1][-]{section.7.3}{ Vyhodnocen\355 testu}{chapter.7}% 25
+\BOOKMARK [0][-]{chapter.8}{Dokumentace}{}% 26
+\BOOKMARK [0][-]{chapter.9}{Z\341ver}{}% 27

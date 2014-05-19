@@ -105,8 +105,7 @@ podnikový portál, portlet, Java, JSR-186, JSR-286, Liferay CE, workflow, BPMN,
 \setcounter{secnumdepth}{4}
 \tableofcontents
 
-\chapter*{Úvod}
-\addcontentsline{toc}{chapter}{Úvod}
+\chapter{Úvod}
 Dnešní společnosti se stále snaží zlepšit svoji efektivitu zaváděním různých počítačových systémů. Stále častěji se nasazují takzvané podnikové portály, které zajišťují jednotný přístup k aplikacím, informacím a dokumentům přehledně z jednoho místa.
 
 Právě práce s dokumenty je v podnicích často klíčová činnost a potřeba řídit jejich tok je zásadní. Za tímto účelem jsou v podnikových portálech používané workflow systémy, které jsou používané k řízení podnikových procesů včetně řízení toků dokumentů. Podnikový portál Liferay Portal CE obsahuje je dodáván s workflow systémem Kaleo. Do tohoto systému je možné vkládat nové definice workflow pouze pomocí dokumentů ve formátu XML, které mají přesně definovanou strukturou. Právě tvorba těchto definic je vhodná pouze pro odborníky a pro méně technicky zdatné pracovníky bývá často neřešitelný problém vytvořit nové workflow definice. Cílem této diplomové práce je vytvořit grafický workflow editor, který bude napojen na workflow systém Kaleo v portálu Liferay Portal CE a bude umožňovat tvorbu workflow definicí v základní notaci BPMN. Tento grafický workflow editor bude vytvořen jako klasická portletová aplikace, která půjde klasickou cestou nasadit do portálu Liferay CE a bude přístupná pro administrátory portálu. Editor umožní vytvářet, upravovat a vkládat workflow definice do portálu. Takto vložené workflow definice již bude možné využít v portálu standardním způsobem a budou tedy moci být dostupné i pro vnitropodnikové dokumenty. Pro vývoj budou použity moderní technologie platformy Java EE. Práce je řešena v rámci Sdružení průmyslových partnerů Fakulty informatiky pro společnost IBA CZ.
@@ -178,7 +177,7 @@ Portletový kontejner má tedy odpovědnost za řízení životního cyklu jedno
 \caption{Vytváření stránky v portálu (převzato z \cite{jsr-286})}
 \end{figure}
 
-\section{Specifikace}
+\section{Portletová specifikace}
 Důvodem pro vytvoření portletové specifikace byla situace, kdy různí dodavatelé používali svá vlastní API, která neumožňovala přenositelnost mezi portálovými servery.
 
 První verze Java Portlet Specification 1.0 (JSR-168) byla vydána v roce 2003. V této specifikaci ještě byly různé nedostatky a chyby, které pak tvůrci portletů stejně řešili každý po svém. To i nadále způsobovalo, že portlety byly mezi portálovými servery stále problematicky přenositelné či nepřenositelné úplně. Proto vznikla druhá verze Java Portlet Specification 2.0 (JSR-286) a ta byla vydána v červnu 2008. Mezi nejdůležitější přínosy patří následující:
@@ -190,7 +189,7 @@ První verze Java Portlet Specification 1.0 (JSR-168) byla vydána v roce 2003. 
 \end{itemize}
 Většina portletových kontejnerů sice poskytuje k základním požadavkům i svá rozšíření. Tyto rozšíření však nemusíme využívat a tak můžeme zachovat myšlenku snadné přenositelnosti.
 
-\subsection{Životní cyklus portletu}
+\subsection*{Životní cyklus portletu}
 Každý portlet musí implementovat rozhraní \verb|Portlet|. Toto rozhraní obsahuje čtyři základní metody, které musí být implementovány a které řídí životní cyklus portletu - \verb|init(), processAction(), render(), destroy()|.
 
 Metoda \verb|init()| je volána ihned při vytváření portletu a je používána například pro přípravu zdrojů potřebných portletem.
@@ -214,7 +213,7 @@ Všechny tyto rozhraní implementuje abstraktní třída \verb|GenericPortlet|. 
 
 Po každé action fázi musí následovat fáze render. Pokud se na portálové stránce vyskytuje více portletů, je metoda render zavolána u všech zobrazených portletů. 
 
-\subsection{Režimy portletu}
+\subsection*{Režimy portletu}
 Portletová specifikace obsahuje tři režimy portletu, které umožňují zobrazit jiný obsah v závislosti na požadovaném úkolu. Tyto režimy využívá metoda \verb|render()|, která podle nich vygeneruje odpovídající obsah.
 
 \begin{itemize}
@@ -225,7 +224,7 @@ Portletová specifikace obsahuje tři režimy portletu, které umožňují zobra
 
 Ve třídě \verb|GenericPortlet| jsou k těmto účelům definovány metody \verb|doView()|, \verb|doEdit()| a \verb|doHelp()|. Jednotlivé portletové režimy by měli být implementovány přetížením těchto metod. Každý portál si také může definovat vlastní portletové režimy. Každý portlet musí mít zadefinováno, které režimy podporuje.
 
-\subsection{Stavy okna}
+\subsection*{Stavy okna}
 Portletová specifikace definuje tři základní stavy.
 
 \begin{itemize}
@@ -234,7 +233,7 @@ Portletová specifikace definuje tři základní stavy.
 \item Maximized -- okno portletu skryje ostatní portlety na stránce a zobrazuje se pouze tento maximalizovaný portlet, nebo zakrývá většinu dostupné plochy.
 \end{itemize}
 
-\subsection{Struktura portálové aplikace}
+\subsection*{Struktura portálové aplikace}
 Portálové aplikace jsou uloženy ve standardní archivním souboru jazyka Java, Web ARchive (WAR). Mohou obsahovat více portletů, servlety, JSP soubory a další. Musí obsahovat webový deskriptor a také navíc portletový deskriptor implementace \verb|portlet.xml|.
 
 
@@ -265,7 +264,7 @@ V počítačových systémech je workflow definováno jako systém řízení wor
 \section{Typy workflow systému}
 Workflow systémy se mohou dělit do několika skupin podle různých hledisek či typů. \cite{workflow}
 
-\subsection{Hledisko charakteru procesů}
+\subsection*{Hledisko charakteru procesů}
 \begin{itemize}
 \item \textbf{Administrativní} workflow systémy jsou určeny k vyřizování běžných administrativních úkonů, které jsou většinou jednoduché, opakující se a dobře strukturované.
 \item \textbf{Ad-hoc} workflow systémy jsou založeny na náhodnosti vzniku. Procesy bývají jedinečné a je nutné je definovat až při jejich vzniku.
@@ -273,13 +272,13 @@ Workflow systémy se mohou dělit do několika skupin podle různých hledisek �
 \item \textbf{Produkční} workflow systémy podporují hlavní podnikové procesy, které vytvářejí přidanou hodnotu k finálnímu produktu.
 \end{itemize}
 
-\subsection{Hledisko orientace procesů}
+\subsection*{Hledisko orientace procesů}
 \begin{itemize}
 \item \textbf{Procesy orientované na lidi.} U těchto systémů spoléhají účastníci sami na sebe. Předávané informace jsou proměnlivé a procesy nejednotné a špatně předpověditelné. Z těchto důvodů jsou průběhy závislé na jednotlivcích.
 \item \textbf{Procesy orientované na sebe.} Tyto systémy jsou zaměřené na klíčové procesy, které obvykle bývají hlavními aktivitami podniku. Jejich pravidla řešení a jejich zpracování jsou pevně daná.
 \end{itemize}
 
-\subsection{Hledisko technologické infrastruktury}
+\subsection*{Hledisko technologické infrastruktury}
 Podle technologické infrastruktury, nad kterou je systém workflow postaven, lze produkty rozdělit do několika skupin.
 \begin{itemize}
 \item Založené na \textbf{elektronické poště} -- využívají dostupné emailové servery. Uživatelé nepotřebují speciální software.
@@ -298,9 +297,9 @@ Institut WfMC vytvořil obecný model, kde mají produkty podobné komponenty. T
 \caption{Obecný model workflow (převzato z \cite{wfmc})}
 \label{fig:obecny_model_workflow}
 \end{figure}
-\clearpage
 
-\textbf{Programové komponenty}
+
+\subsection*{Programové komponenty}
 
 \begin{itemize}
 \item Nástroj pro definici procesů (definition tool) umožňuje definovat procesy, přiřazovat role a stanovat pravidla.
@@ -309,7 +308,7 @@ Institut WfMC vytvořil obecný model, kde mají produkty podobné komponenty. T
 \item Uživatelské rozhraní (user interface) zajišťuje komunikaci mezi správcem úkolů a uživatelem. Často tvoří jeden celek spolu se správcem úkolů.
 \end{itemize}
 
-\textbf{Datové komponenty}
+\subsection*{Datové komponenty}
 
 \begin{itemize}
 \item Definice procesu (process definition) popisuje strukturu procesu.
@@ -320,7 +319,7 @@ Institut WfMC vytvořil obecný model, kde mají produkty podobné komponenty. T
 \item Model organizační struktury (organization/role model) popisuje organizační strukturu podniku. Pokud není definován, musí být úkoly přiřazovány pouze konkrétním uživatelům.
 \end{itemize}
 
-\subsection{Fáze workflow}
+\subsection*{Fáze workflow}
 Obecně jsou rozlišovány dvě fáze workflow: fáze návrhu workflow a fáze průběhu workflow. \cite{workflow}
 
 Fáze návrhu workflow v sobě zahrnuje funkce pro návrh a definici procesu, které jsou poskytovány analytickými a modelovacími nástroji. Ty umožňují převod procesu z reálného světa do normalizované podoby. Výsledkem je počítačově zpracovatelný popis procesu ve smyslu: kdo, kdy, co, s čím, za jakým účelem a jak má udělat.
@@ -358,7 +357,7 @@ Poslední verze BPMN 2.0 byla vydána v lednu 2011 a klade si za cíl být jedin
 
 Objekty jazyka BPMN jsou děleny do těchto základních kategorií. Tokové objekty, spojovací objekty, plavecké dráhy a artefakty. \cite{bpmn} Workflow systém Kaleo umožnuje využít pouze tokové objekty a základní spojovací objekty.
 
-\subsection{Tokové objekty}
+\subsection*{Tokové objekty}
 Bývají označovány jako hlavní grafické prvky definující firemní procesy a dále je možné je dělit například tak, jak je vidět na obrázku \ref{fig:tokove_objekty}.
 
 \begin{itemize}
@@ -374,7 +373,7 @@ Bývají označovány jako hlavní grafické prvky definující firemní procesy
 \label{fig:tokove_objekty}
 \end{figure}
 
-\subsection{Spojovací objekty}
+\subsection*{Spojovací objekty}
 Spojové objekty slouží ke spojování tokových objektů. Dělí se na sekvenční tok, tok zpráv a asociaci. Workflow systém Kaleo umožňuje využít pouze sekvenční tok, který znázorňuje posloupnoust procesních toků. Zdrojem a cílem je vždy nějaký tokový objekt.
 
 \begin{figure}[htp]
@@ -384,7 +383,7 @@ Spojové objekty slouží ke spojování tokových objektů. Dělí se na sekven
 \end{figure}
 
 
-\subsection{Plavecké dráhy}
+\subsection*{Plavecké dráhy}
 Plavecké dráhy, někdy nazývané kontexty, slouží k organizování a kategorizaci činností. Rozlišují se typy: bazén a dráha.
 
 \begin{itemize}
@@ -393,7 +392,7 @@ Plavecké dráhy, někdy nazývané kontexty, slouží k organizování a katego
 \end{itemize}
 
 
-\subsection{Artefakty}
+\subsection*{Artefakty}
 Artefakty umožňují přidávat další informace do modelu a tím rozšiřují dostupné elementy v BPMN. Tím mohou zvyšovat informační hodnotu modelu. Existují tyto artefakty: datové objekty, skupiny a anotace.
 
 \begin{itemize}
@@ -417,7 +416,7 @@ Dalším nástrojem, který umožňuje vytvářet workflow je  Activiti Modeler,
 
 \begin{figure}[htp]
 \centering
-\includegraphics[width=340px]{images/activiti_modeler.png}
+\includegraphics[width=330px]{images/activiti_modeler.png}
 \caption{Activiti modeler}
 \label{fig:activiti_modeler}
 \end{figure}
@@ -444,11 +443,11 @@ Tento designer se také skládá ze tří základních panelů. V horním panelu
 \end{figure}
 
 \section{Požadavky na vytvářenou aplikaci}
-Grafický editor pro tvorbu je velice speciální aplikace a při analýze požadavků jsem zjistil, že tento produkt má pouze jeden diagram užití. Hlavně z tohoto důvodu jsem zvolil analýzu v podobě seznamu požadavků.Tento způsob zápisu je také bližší zákazníkům, kterým bude následně tento produkt nabízen. 
+Grafický editor pro tvorbu je velice speciální aplikace a při analýze požadavků jsem zjistil, že tento produkt má pouze jeden diagram užití. Hlavně z tohoto důvodu jsem zvolil analýzu v podobě seznamu skupin požadavků.Tento způsob zápisu je také bližší zákazníkům, kterým bude následně tento produkt nabízen. 
 
 \begin{center}
 \begin{longtable}{|p{5.5cm}|p{5.5cm}|}
-\caption{Seznam požadavků}\\
+\caption{Seznam skupin požadavků}\\
 \hline
 \textbf{Požadavek} & \textbf{Návrh řešení}  \\
 \hline
@@ -490,7 +489,7 @@ Ve druhé kapitole byl představen životní cyklus portletu a hlavní koncepty 
 
 Portletové či webové rámce v sobě implementují osvědčené postupy a vzory pro zjednodušení vývoje. Pro vývoj portletů lze využít i ne přímo portletových rámců, například Struts nebo JSF, ale v takovémto případě je nutné použít takzvané portletové mosty, které řeší rozdíly mezi servletovým a portálovým životním cyklem. Toto řešení ale v sobě obsahuje vícefázový životní cyklus portletů a někdy to znesnadňuje využití plných možností portletové technologie. Portletový rámec navržený přímo pro vývoj portletů je rámec Spring MVC Portlet, který byl zvolen také pro vývoj této aplikace. Tento portletový rámec byl zvolen zejména proto, že je standardně používaný ve firmě IBA CZ, pro kterou je tato práce řešena v rámci Sdružení průmyslových partnerů Fakulty informatiky.
 
-\subsection{Spring Portlet MVC}
+\subsection*{Spring Portlet MVC}
 Rámec Spring Portlet MVC je založen na stejných konceptech, třídách a rozhraní jako Spring Web MVC framework \cite{spring-web-mvc}. Spring Portlet MVC je navržen pouze pro vývoj portletů a je možné pomocí něj vyvíjet portlety, které splňují portletové standardy JSR-168 i JSR-286. Také implementuje klasickou architekturu MVC. Ta se skládá z následujících částí. \cite{mvc} 
 
 \begin{itemize}
@@ -503,7 +502,7 @@ Nejdůležitější roli v portletu má třída \verb|DispatcherPortlet|, která
 
 
 \section{Alloy UI framework}
-Alloy je UI meta framework, který poskytuje konzistentní a jednoduché API pro vytváření webových aplikací na třech úrovní prohlížeče: struktura, styl a chování. Je založených na moderních technologiích CSS3, HTML5 a javascriptovém frameworku YUI3. \cite{alloy} V Liferay Portal od verze 6 nahradil tento framework dříve používané jQuery a staví se na něm grafické rozhraní Liferay portálu. 
+Alloy je UI meta framework, který poskytuje konzistentní a jednoduché API pro vytváření webových aplikací na třech úrovní prohlížeče: struktura, styl a chování. Je založených na moderních technologiích CSS3, HTML5 a javascriptovém frameworku YUI3. \cite{alloy} V Liferay Portal od verze 6 nahradil tento framework dříve používané jQuery a staví se na něm grafické rozhraní Liferay portálu.
 
 \begin{figure}[htp]
 \centering
@@ -686,12 +685,12 @@ Množina využitelných testů je velmi široká a proto je vždy nutné určit,
 \section{Zvolené druhy testů}
 Pro účely této aplikace jsem jako nejvhodnější zvolil funkční testování v kombinaci s testováním kompatability.
 
-\subsection{Funkční testování}
+\subsection*{Funkční testování}
 Je to postup, kdy je ověřováno správné fungování aplikace nebo její části podle předem definovaného nebo očekávaného chování. Aplikace se při tomto testu prochází z pohledu uživatele a je tedy kontrolováno, zda reakce na uživatelovy akce a vstupy jsou správné a jestli aplikace podává správné výstupní informace a výsledky.
 
 Zde je možné zahrnout kontrolu správnosti odkazování, ověřování funkčnosti formulářových prvků včetně validace vstupů a reakcí na chybný vstup. Mezi další patří také správná funkčnost JavaScript nebo AJAX částí aplikace.
 
-\subsection{Testování kompatability}
+\subsection*{Testování kompatability}
 Protože existují různé platformy spolu s rozmanitými prohlížeči, kde mohou být webové aplikace spouštěny, je testování kompatability velmi důležité. Je tedy vždy vhodné otestovat aplikaci na nejběžnějších kombinacích systémů, aby se tak zajistila správná funkčnost aplikace pro co nejširší okruh uživatelů.
 
 \section{Příprava a průběh testů}
@@ -713,8 +712,8 @@ Aplikace workflow editor je určena pro tvorbu workflow definic v portálu Lifer
 \end{itemize}
 Následuje úkazka vybraného testového scénaře.
 
-\begin{table}[htp]
-\textbf{Testový scénář - TS-02 Změna již vloženého workflow}
+
+\subsection*{Testový scénář - TS-02 Změna již vloženého workflow}
  
 
 \textbf{Vstupní podmínky:} Uživatel je v roli Administrátora (má tedy přístup k do kontrolního panelu), je přihlášený v portálu a nachází se v sekci kontrolní panel. Uživatel již vytvořil workflow a vložil ho do portálu na základě Vytvoření nového workflow.
@@ -730,7 +729,7 @@ Následuje úkazka vybraného testového scénaře.
 \item Kliknutí na tlačítko "Uložit" pro uložení pozměněného workflow
 
 \end{enumerate}
-\end{table}
+
 
 \section{Vyhodnocení testů}
 Testové scénáře byly prováděny průběžně ihned po implementaci jednotlivých části na prostředí Windows 7 a v prohlížeči Firefox. Problémy v nich nalezené byly ihned opravovány a nebyly nijak dokumentovány.
@@ -770,7 +769,7 @@ Bylo tedy prováděno 12 testových scénářů na celkem na 6 různých prostř
 Nalezené chyby byly opraveny a zopakování testových scénářů ověřilo odstranění chyb.
 
 \chapter{Dokumentace}
-V této kapitole bude popsána vytvořená uživatelská dokumentace pro aplikaci Workflow Editor. Celá dokumentace je vytvořena v systému confluence firmy IBA CZ a není dostupná z veřejné sítě. Z toho důvodu je popsána pouze struktura této dokumentace a připojena jedna ukázka. 
+V této kapitole bude popsána vytvořená uživatelská dokumentace pro aplikaci Workflow Editor. Celá dokumentace je vytvořena v systému confluence firmy IBA CZ a není dostupná z veřejné sítě. Proto je pouze struktura dokumentace a poté je připojena jedna ukázka.
 
 \begin{itemize}
 \item Úvod a základní popis aplikace
@@ -786,25 +785,16 @@ V této kapitole bude popsána vytvořená uživatelská dokumentace pro aplikac
 \item Validace, uložení a export workflow
 \end{itemize}
 
-Ukázku z dokumentace můžeme vidět na obrázku \ref{fig:dokumentace}.
-
-\textbf{Úvodní a základní popis}
-
-Workflow editor poskytuje táhni a pusť grafické rozhraní pro tvorbu nových a úpravu stávajících workflow definic v portálu Liferay CE. Workflow definice je možné tvořit pro všechny procesy v Liferay portálu.
-
-\textbf{Vytvoření či načtení existující workflow definice}
-Úvodní obrazovka, viz. obrázek \ref{fig:uvodni_obrazovka} zobrazuje v tabulce všechny aktuálně nahrané workflow definice v portálu. U každé definice vidíme, jméno, titulek, verzi a to, zda je v portálu aktivní. V posledním sloupci je tlačítko Edit, které nám umožní vybranou definici upravit nebo může zvolit vytvoření nové definice pomocí tlačítka nad tabulkou.
-
+Na přiloženém obrázku \ref{fig:dokumentace} můžeme vidět část dokumentace nacházející na v systému confluence firmy IBA CZ.
 
 \begin{figure}[htp]
 \centering
-\includegraphics[width=340px]{images/01_uvodni_obrazovka.png}
+\includegraphics[width=340px]{images/screen_confluence.png}
 \caption{Úvodní obrazovka aplikace}
-\label{fig:uvodni_obrazovka}
+\label{fig:dokumentace}
 \end{figure}
 
-\chapter*{Závěr}
-\addcontentsline{toc}{chapter}{Závěr}
+\chapter{Závěr}
 Cílem této práce bylo seznámit se s problematikou podnikových portálů a tvorbou portletových aplikací. Praktickým výstupem práce bylo navrhnout a implementovat grafický workflow editor pro standardantí workflow systém v portálu Liferay CE.
 
 Cíle práce se podařilo splnit. Úvodní část práce poskytuje základní orientaci v oblasti podnikových portálů i čtenáři, který s nimi nemá předchozí zkušenost. Byly mu představeny výhody při nasazení portálu v podnikovém prostředí, kdy portál slouží jako integrační platforma pro přístup k aplikacím a různým zdrojům. Byla představena dostupná portálová řešení a poté se práce blíže věnovala portálu Liferay, pro který je vytvářena aplikace. Pak byl čtenář seznám s vývojem portletů pomocí portletových specifikací JSR-168 a JSR-286. Byl představen životní cyklus portletové aplikace, architektura portálu a další specifika vývoje portletů. Dále byl čtenář seznámen s oblastí worklow systémů, jejich dělení a obecným modele workflow. Také mu byl představena notace BPMN používaná prr modelování podnikových procesů.
@@ -823,62 +813,56 @@ Hlavní přínos pro mne vidím v seznámení se s oblastí podnikových portál
 
 
 \bibitem{gala}
-GÁLA, L. et al. \textit{Podniková informatika}. 1. vyd. Praha: Grada Publishing, 2006. 
+GÁLA, L. \textit{Podniková informatika}. 1. vyd. Praha: Grada, 2006. 
 
 \bibitem{jsr-286}
-\textit{JavaTM Portlet Specification}, The Java Community Process, dostupné na \url{http://www.jcp.org/en/jsr/detail?id=286} [cit. 2014-03-27].
+HEPPER, S. \textit{JavaTM Portlet Specification Version 2.0}, [online] 2008 [cit. 2014-03-27]. Dostupné z \url{http://www.jcp.org/en/jsr/detail?id=286}.
 
 \bibitem{cech}
-ČECH, P. \textit {Přinos podnikových portálů pro management znalostí}, in Internet a konkurenceschopnost, Zlín, 2004.
+ČECH, P. \textit {Přínos podnikových portálů pro management znalostí}, in Internet a konkurenceschopnost, Zlín, 2004.
 
 \bibitem{enterprise-portal}
-\textit{Enterprise portal}, Wikipedia, dostupné na \url{http://en.wikipedia.org/wiki/Enterprise_portal} [cit. 2014-03-27].
+Enterprise portal. \textit{Wikipedia: the free encyclopedia} [online]. San Francisco (CA): Wikipedia Foundation,2011-, naposledy upraveno 7.2.2014 [cit. 2014-03-27]. Dostupné z \url{http://en.wikipedia.org/wiki/Enterprise_portal} .
 
 \bibitem{developer-guide}
-\textit{Liferay Portal 6.2 Developer's Guide}, Liferay Inc., dostupné na \url{http://www.liferay.com/documentation/liferay-portal/6.2/development} [cit. 2014-04-02].
+LIFERAY. Liferay Portal 6.2 Developer's Guide. In: \textit{Liferay.com} [online].  [cit. 2014-04-02]. Dostupné z \url{http://www.liferay.com/documentation/liferay-portal/6.2/development}
 
 \bibitem{liferay-features}
-\textit{Portal Features}, Liferay Inc., dostupné na \url{http://www.liferay.com/products/liferay-portal/features/portal} [cit. 2014-04-02].
+LIFERAY. Portal Features. In: \textit{Liferay.com} [online]. [cit. 2014-04-02]. Dostupné z \url{http://www.liferay.com/products/liferay-portal/features/portal}
 
 \bibitem{portlets-in-action}
-SARIN, Ashish. \textit{Portlets in action}, Shelter Island, NY: Manning, 2011.
+ASHISH, S. \textit{Portlets in Action}, Shelter Island, NY: Manning Publications, 2011.
 
 \bibitem{wfmc}
-\textit{Terminology \& Glossary}, Workflow Management Coalition, dostupné na \url{http://www.wfmc.org/standards/docs/TC-1011_term_glossary_v3.pdf} [cit. 2014-04-14].
+Terminology \& Glossary. \textit{Workflow Management Coalition} [online]. [cit. 2014-04-14]. Dostupné z \url{http://www.wfmc.org/standards/docs/TC-1011_term_glossary_v3.pdf} 
 
 \bibitem{workflow}
 CARDA, A., KUNSTOVÁ, R. \textit {Workflow : Nástroj manažera pro řízení podnikových procesů}. 2. vyd. Praha: Grada Publishing, 2003.
 
 \bibitem{bpmn}
-\textit{Business Process Model and Notation (BPMN)}, Object Management Group, Inc., dostupné na \url{http://www.omg.org/spec/BPMN/2.0/} [cit. 2014-04-23]
-
+OBJECT MANAGEMENT GROUP. \textit{Business Process Model and Notation (BPMN)} [online]. 2011 [cit. 2014-04-23]. Dostupné z \url{http://www.omg.org/spec/BPMN/2.0/} 
 
 \bibitem{activiti}
-\textit{acitivi}
+RADEMAKERS, Tijs. \textit{Activiti in action}. Shelter Island, NY: Manning Publications, 2012.
 
 \bibitem{spring-web-mvc}
-Web MVC framework. \textit{Spring Framework Reference Documentation}, dostupné na \url{http://static.springsource.org/spring/docs/current/
-spring-framework-reference/html/mvc.html} [cit. 2014-05-04]
+Web MVC framework. \textit{Spring Framework Reference Documentation} [online]. [cit. 2014-05-04]. Dostupné z \url{http://static.springsource.org/spring/docs/current/
+spring-framework-reference/html/mvc.html} 
 
 \bibitem{mvc}
-Model-view-controller. In: \textit{Wikipedia: the free encyclopedia} [online]. San Francisco (CA): Wikipedia Foundation, 2011
+Model-view-controller. \textit{Wikipedia: the free encyclopedia} [online]. San Francisco (CA): Wikipedia Foundation,2011-, naposledy upraveno 23.1.2014 [cit. 2014-03-27]. Dostupné z \url{http://en.wikipedia.org/wiki/Model-view-controller} .
 
 \bibitem{alloy}
-\textit{http://alloyui.com/}
+LIFERAY. \textit{About} [online]. [cit. 2014-04-06]. Dostupné z \url{http://alloyui.com/about/}
 
 \bibitem{kaner}
-ABRAN, A., MOORE, J.W. \textit{Guide to the Software Engineering Body of Knowledge} [online]. IEEE Computer Society, 2004 Version, dostupné na \url{http://www.inf.ed.ac.uk/teaching/courses/seoc/2006_2007/resources/SWEBOK_Guide_2004.pdf} [cit. 2014-05-08]
+ABRAN, A., MOORE, J.W. \textit{Guide to the Software Engineering Body of Knowledge: 2004 version} [online]. Los Alamitos, CA: IEEE Computer Society Press, 2005. Dostupné na \url{http://www.inf.ed.ac.uk/teaching/courses/seoc/2006_2007/resources/SWEBOK_Guide_2004.pdf} 
 
 \bibitem{web-test}
-VIJAY, S. \textit{Web Testing, Example Test cases} [online]., dostupné na \url{http://www.
-softwaretestinghelp.com/web-testing-example-test-cases} [cit. 2014-05-08]
+VIJAY, S. \textit{Web Testing, Example Test cases} [online]. [cit. 2014-05-08]. Dostupné z \url{http://www.softwaretestinghelp.com/web-testing-example-test-cases} 
 
 \end{thebibliography}
 
-
-\newpage
-\appendix
-\chapter{Položky seznamu}
 
 
 \end{document}

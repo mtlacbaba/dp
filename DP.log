@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.27)  24 MAY 2014 20:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.3.27)  25 MAY 2014 11:22
 entering extended mode
 **C:/Users/IB/Documents/dp/dp/DP.tex
 (C:/Users/IB/Documents/dp/dp/DP.tex
@@ -519,6 +519,12 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \c@LT@chunks=\count113
 \LT@p@ftn=\toks18
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\makeidx.sty"
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+\@indexfile=\write3
+
+Writing index file DP.idx
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
@@ -578,7 +584,7 @@ LaTeX Info: Redefining \pageref on input line 79.
 LaTeX Info: Redefining \nameref on input line 79.
 
 (C:\Users\IB\Documents\dp\dp\DP.out) (C:\Users\IB\Documents\dp\dp\DP.out)
-\@outlinefile=\write3
+\@outlinefile=\write4
 
 [1
 
@@ -620,7 +626,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 2.
 )
-\tf@toc=\write4
+\tf@toc=\write5
 
 [1
 
@@ -905,7 +911,7 @@ Kapitola 8.
 File: images/screen_confluence.png Graphic file (type png)
 
 <use images/screen_confluence.png>
-Package pdftex.def Info: images/screen_confluence.png used on input line 794.
+Package pdftex.def Info: images/screen_confluence.png used on input line 793.
 (pdftex.def)             Requested size: 341.27625pt x 406.05128pt.
  [37
 
@@ -914,42 +920,43 @@ Kapitola 9.
 
 Package hyperref Warning: Composite letter `\textasciicaron+e'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 799.
+(hyperref)                removing `\textasciicaron' on input line 798.
 
+No file DP.ind.
 [39
 
 ]
-Underfull \hbox (badness 3547) in paragraph at lines 827--828
+Underfull \hbox (badness 3547) in paragraph at lines 826--827
 []\T1/lmr/m/n/10.95 Enterprise por-tal. \T1/lmr/m/it/10.95 Wi-ki-pe-dia: the fr
 ee en-cyclo-pe-dia \T1/lmr/m/n/10.95 [on-line]. San
  []
 
 
-Underfull \hbox (badness 2818) in paragraph at lines 827--828
+Underfull \hbox (badness 2818) in paragraph at lines 826--827
 \T1/lmr/m/n/10.95 Fran-cisco (CA): Wi-ki-pe-dia Foundation,2011-, na-po-sledy u
 pra-veno
  []
 
 
-Underfull \hbox (badness 1874) in paragraph at lines 830--831
+Underfull \hbox (badness 1874) in paragraph at lines 829--830
 []\T1/lmr/m/n/10.95 LIFERAY. Li-fe-ray Por-tal 6.2 De-ve-lo-per's Gu-ide. In: \
 T1/lmr/m/it/10.95 Li-fe-ray.com
  []
 
 
-Underfull \hbox (badness 3657) in paragraph at lines 830--831
+Underfull \hbox (badness 3657) in paragraph at lines 829--830
 \T1/lmr/m/n/10.95 [on-line]. [cit. 2014-04-02]. Do-stupné z []$\T1/lmtt/m/n/10.
 95 http : / / www . liferay . com /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--834
+Underfull \hbox (badness 10000) in paragraph at lines 832--833
 \T1/lmr/m/n/10.95 Do-stupné z []$\T1/lmtt/m/n/10.95 http : / / www . liferay . 
 com / products / liferay-[]portal /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 851--853
+Underfull \hbox (badness 10000) in paragraph at lines 850--852
 $\T1/lmtt/m/n/10.95 org / spring / docs / current / spring-[]framework-[]refere
 nce / html /$
  []
@@ -957,25 +964,25 @@ nce / html /$
 [40
 
 ]
-Underfull \hbox (badness 2818) in paragraph at lines 855--856
+Underfull \hbox (badness 2818) in paragraph at lines 854--855
 \T1/lmr/m/n/10.95 Fran-cisco (CA): Wi-ki-pe-dia Foundation,2011-, na-po-sledy u
 pra-veno
  []
 
 
-Underfull \hbox (badness 1237) in paragraph at lines 858--859
+Underfull \hbox (badness 1237) in paragraph at lines 857--858
 []\T1/lmr/m/n/10.95 LIFERAY. \T1/lmr/m/it/10.95 About \T1/lmr/m/n/10.95 [on-lin
 e]. [cit. 2014-04-06]. Do-stupné z []$\T1/lmtt/m/n/10.95 http : / /$
  []
 
 
-Underfull \hbox (badness 1038) in paragraph at lines 864--865
+Underfull \hbox (badness 1038) in paragraph at lines 863--864
 []\T1/lmr/m/n/10.95 VIJAY, S. \T1/lmr/m/it/10.95 Web Tes-ting, Exam-ple Test ca
 -ses \T1/lmr/m/n/10.95 [on-line]. [cit. 2014-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 864--865
+Underfull \hbox (badness 10000) in paragraph at lines 863--864
 \T1/lmr/m/n/10.95 05-08]. Do-stupné z []$\T1/lmtt/m/n/10.95 http : / / www . so
 ftwaretestinghelp . com /$
  []
@@ -991,10 +998,10 @@ Package rerunfilecheck Info: File `DP.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 870.
  ) 
 Here is how much of TeX's memory you used:
- 8426 strings out of 493921
- 119498 string characters out of 3144885
- 260441 words of memory out of 3000000
- 11329 multiletter control sequences out of 15000+200000
+ 8437 strings out of 493921
+ 119699 string characters out of 3144885
+ 260514 words of memory out of 3000000
+ 11335 multiletter control sequences out of 15000+200000
  63520 words of font info for 47 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  30i,8n,42p,1579b,1232s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1012,7 +1019,7 @@ eX 2.9/fonts/type1/public/lm/lmro10.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/public/lm/lmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
 lic/lm/lmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmtt1
 0.pfb>
-Output written on DP.pdf (46 pages, 821958 bytes).
+Output written on DP.pdf (46 pages, 821856 bytes).
 PDF statistics:
  713 PDF objects out of 1000 (max. 8388607)
  209 named destinations out of 1000 (max. 500000)
